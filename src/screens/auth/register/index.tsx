@@ -4,8 +4,8 @@ import { Container } from "./styles";
 
 export const Register: React.FC = () => {
   return (
-    <View>
-      <Container>Signup</Container>
-    </View>
+    <Container>
+      <Text>Signup</Text>
+    </Container>
   );
 };

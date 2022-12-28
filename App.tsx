@@ -7,7 +7,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { AuthNavigator } from "./src/routes/AuthNavigator";
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components/native";
-import { COLORS } from "./src/constants";
+import { theme } from "./src/constants";
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -22,7 +22,7 @@ export default function App() {
 
   if (!loaded) return null;
   return (
-    <ThemeProvider theme={COLORS}>
+    <ThemeProvider theme={theme}>
       <NavigationContainer>
         {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
         <AuthNavigator />

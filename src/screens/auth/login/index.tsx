@@ -5,8 +5,8 @@ import { Container } from "./styles";
 
 export const Login: React.FC = () => {
   return (
-    <View>
-      <Container>Login</Container>
-    </View>
+    <Container>
+      <Text>Login</Text>
+    </Container>
   );
 };

@@ -1,4 +1,4 @@
-import { COLORS, SHADOWS, SIZES, FONTS } from "./styles/theme";
 import { ROUTE } from './route'
+import theme from './styles/theme';
 
-export { COLORS, SHADOWS, SIZES, FONTS, ROUTE };
+export { ROUTE, theme };

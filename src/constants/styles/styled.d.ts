@@ -3,6 +3,6 @@ import theme from './theme'
 import { COLORS } from './theme';
 
 declare module 'styled-components' {
-    type ThemeType = typeof COLORS
+    type ThemeType = typeof theme
     export interface DefaultTheme extends ThemeType{}
 }
