@@ -1,5 +1,5 @@
-export default {  
-  COLORS : {
+export default {
+  COLORS: {
     primary_600: "#20C498",
     primary_500: "#28F7CB",
     primary_400: "#53F7CB",
@@ -25,36 +25,36 @@ export default {
     gray_7: "#BAB9C1",
     gray_8: "#D1D0D5",
     gray_9: "#E8E8EA",
+    white: "#ffffff",
   },
 
-  SIZES : {
-    base: 8,
-    small: 12,
-    font: 14,
-    medium: 16,
-    large: 18,
-    extraLarge: 24,
+  SIZES: {
+    base_8px: 8,
+    small_12px: 12,
+    font_14px: 14,
+    medium_16px: 16,
+    large_18px: 18,
+    extraLarge_24px: 24,
   },
 
-  FONTS :{
-    bold: "InterBold",
-    semiBold: "InterSemiBold",
-    medium: "InterMedium",
-    regular: "InterRegular",
-    light: "InterLight",
+  FONTS: {
+    interbold: "InterBold",
+    intersemiBold: "InterSemiBold",
+    intermedium: "InterMedium",
+    interregular: "InterRegular",
+    interlight: "InterLight",
   },
 
-  SHADOWS : {
-    
+  SHADOWS: {
     light: {
-      shadowColor: '#706e79',
+      shadowColor: "#706e79",
       shadowOffset: {
         width: 0,
         height: 1,
       },
       shadowOpacity: 0.22,
       shadowRadius: 2.22,
-  
+
       elevation: 3,
     },
     medium: {
@@ -65,7 +65,7 @@ export default {
       },
       shadowOpacity: 0.29,
       shadowRadius: 4.65,
-  
+
       elevation: 7,
     },
     dark: {
@@ -76,9 +76,8 @@ export default {
       },
       shadowOpacity: 0.41,
       shadowRadius: 9.11,
-  
-      elevation: 14,
-      
-    },
 
-  }}
+      elevation: 14,
+    },
+  },
+};

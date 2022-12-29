@@ -8,7 +8,10 @@ const { Navigator, Screen } = createStackNavigator();
 export const AuthNavigator = () => {
   console.log(Navigator);
   return (
-    <Navigator screenOptions={{}} initialRouteName={ROUTE.LOGIN}>
+    <Navigator
+      screenOptions={{ headerShown: false }}
+      initialRouteName={ROUTE.LOGIN}
+    >
       <Screen name={ROUTE.LOGIN} component={Login} />
       <Screen
         name={ROUTE.REGISTER}

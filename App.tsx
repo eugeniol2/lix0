@@ -1,7 +1,5 @@
 import "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { Home } from "./src/screens/home";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { AuthNavigator } from "./src/routes/AuthNavigator";
@@ -24,8 +22,10 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
-        <AuthNavigator />
+        <SafeAreaProvider>
+          {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
+          <AuthNavigator />
+        </SafeAreaProvider>
       </NavigationContainer>
     </ThemeProvider>
   );

@@ -1,10 +1,17 @@
 import styled from 'styled-components/native';
-import { View } from 'react-native';
 
 export const Container = styled.View`
-    width: 250px;
-    height: 200px;
-    background-color: ${({theme})=> theme.COLORS.auxiliary_yellow};
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    background-color: ${({theme})=> theme.COLORS.white};
+
+    
     
 `;
 
