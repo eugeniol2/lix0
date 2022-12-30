@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import { IMAGES } from "../../../assets";
 import { Container } from "./styles";
-import { Button } from "../../../components/button";
+import { MainButton } from "../../../components/mainButton";
 import { theme } from "../../../constants";
 
 export const Login: React.FC = () => {
@@ -11,7 +11,17 @@ export const Login: React.FC = () => {
     <SafeAreaView>
       <Container>
         <Image source={IMAGES.logo} />
-        <Button title="Login" backGroundColor={theme.COLORS.secondary_500} />
+        <MainButton
+          type="outlined"
+          color={theme.COLORS.secondary_500}
+          title="Login"
+        />
+
+        <MainButton
+          type="contained"
+          color={theme.COLORS.primary_400}
+          title="Cadastrar"
+        />
       </Container>
     </SafeAreaView>
   );

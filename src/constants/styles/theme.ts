@@ -1,10 +1,10 @@
 export default {
   COLORS: {
-    primary_600: "#20C498",
-    primary_500: "#28F7CB",
-    primary_400: "#53F7CB",
-    primary_300: "#7EF9D8",
-    primary_200: "#A9FBE5",
+    primary_600: "#19B84A",
+    primary_500: "#1FE65E",
+    primary_400: "#4CEB7D",
+    primary_300: "#79F09D",
+    primary_200: "#A5F5BE",
 
     secondary_600: "#472ACC",
     secondary_500: "#5935FF",
@@ -29,12 +29,12 @@ export default {
   },
 
   SIZES: {
-    base_8px: 8,
-    small_12px: 12,
-    font_14px: 14,
-    medium_16px: 16,
-    large_18px: 18,
-    extraLarge_24px: 24,
+    base_8px: "8px",
+    small_12px: "12px",
+    font_14px: "14px",
+    medium_16px: "16px",
+    large_18px: "18px",
+    extraLarge_24px: "24px",
   },
 
   FONTS: {
