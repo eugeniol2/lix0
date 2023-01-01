@@ -11,7 +11,6 @@ export const TouchableOpacityButton = styled.TouchableOpacity<MainButtonProps>`
   height: 40px;
   width: 100%;
   border-radius: 6px;
-  display: flex;
   justify-content: center;
   align-items: center;
   background: ${({ color }) => color};

@@ -1,7 +1,6 @@
 import { StyleSheet, Text, TouchableOpacityProps, View } from "react-native";
 import { TouchableOpacityButton, TouchableOpacityButtonTitle } from "./styles";
 import React from "react";
-import { theme } from "../../constants";
 import { MainButtonProps } from "./styles";
 
 export const MainButton: React.FC<MainButtonProps> = ({
