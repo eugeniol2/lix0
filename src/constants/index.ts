@@ -1,4 +1,4 @@
-import { ROUTE } from './route'
-import theme from './styles/theme';
+import { ROUTE } from "./route";
+import theme from "./theme/theme";
 
 export { ROUTE, theme };

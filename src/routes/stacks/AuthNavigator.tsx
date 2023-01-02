@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Login, ForgotPassword, Register } from "../screens/auth";
-import { ROUTE } from "../constants";
+import { Login, ForgotPassword, Register } from "../../screens";
+import { ROUTE } from "../../constants";
 
 const { Navigator, Screen } = createStackNavigator();
 

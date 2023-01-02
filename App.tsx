@@ -2,10 +2,11 @@ import "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { AuthNavigator } from "./src/routes/AuthNavigator";
+import { AuthNavigator } from "./src/routes/stacks/AuthNavigator";
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/constants";
+import Routes from "./src/routes";
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -21,12 +22,9 @@ export default function App() {
   if (!loaded) return null;
   return (
     <ThemeProvider theme={theme}>
-      <NavigationContainer>
-        <SafeAreaProvider>
-          {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
-          <AuthNavigator />
-        </SafeAreaProvider>
-      </NavigationContainer>
+      <SafeAreaProvider>
+        <Routes />
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }

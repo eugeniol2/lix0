@@ -8,6 +8,7 @@ import { Container, ButtonContainer } from "./styles";
 import { MainButton, ControlledInput } from "../../../components";
 import { theme } from "../../../constants";
 import { loginSchema } from "../../../validations/loginSchema";
+import { useNavigation } from "@react-navigation/native";
 
 type loginData = {
   email: string;
@@ -15,6 +16,7 @@ type loginData = {
 };
 
 export const Login: React.FC = () => {
+  const navigation = useNavigation();
   const {
     control,
     handleSubmit,
@@ -29,6 +31,7 @@ export const Login: React.FC = () => {
 
   const handleUserLogin = (data: loginData) => {
     console.log(data);
+    navigation.navigate("Register");
   };
 
   return (
