@@ -6,7 +6,8 @@ import { AuthNavigator } from "./src/routes/stacks/AuthNavigator";
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/constants";
-import Routes from "./src/routes";
+import { Routes } from "./src/routes";
+import { AuthProvider } from "./src/context/authProvider";
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -23,7 +24,11 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
-        <Routes />
+        <NavigationContainer>
+          <AuthProvider>
+            <Routes />
+          </AuthProvider>
+        </NavigationContainer>
       </SafeAreaProvider>
     </ThemeProvider>
   );

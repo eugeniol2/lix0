@@ -1,17 +1,14 @@
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { AuthNavigator, AppNavigator } from "./stacks";
-
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { useAuth } from "../context/authProvider/useAuth";
+import { AppNavigator } from "./stacks/AppNavigator";
+import { AuthNavigator } from "./stacks/AuthNavigator";
 
 export const Routes = () => {
-  return (
-    <NavigationContainer>
-      {/* {isAuthenticated ? <AuthNavigator /> : AppNavigator} */}
-      {/* <AppNavigator /> */}
-      <AuthNavigator />
-    </NavigationContainer>
-  );
-};
+  const auth = useAuth();
 
-export default Routes;
+  if (!auth.email) {
+    return <AuthNavigator />;
+  }
+
+  return <AppNavigator />;
+};

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useForm } from "react-hook-form";
@@ -9,6 +9,7 @@ import { MainButton, ControlledInput } from "../../../components";
 import { theme } from "../../../constants";
 import { loginSchema } from "../../../validations/loginSchema";
 import { useNavigation } from "@react-navigation/native";
+import { useAuth } from "../../../context/authProvider/useAuth";
 
 type loginData = {
   email: string;
@@ -16,7 +17,10 @@ type loginData = {
 };
 
 export const Login: React.FC = () => {
+  const { authenticate } = useAuth();
   const navigation = useNavigation();
+  const [isLoading, setIsLoading] = useState(true);
+
   const {
     control,
     handleSubmit,
@@ -29,10 +33,15 @@ export const Login: React.FC = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  const handleUserLogin = (data: loginData) => {
-    console.log(data);
-    navigation.navigate("Register");
-  };
+  async function handleUserLogin({ email, password }: loginData) {
+    try {
+      await authenticate(email, password);
+      navigation.navigate("Home");
+    } catch (error) {
+      console.log(error);
+      //mostrar erros com toastify ?
+    }
+  }
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
