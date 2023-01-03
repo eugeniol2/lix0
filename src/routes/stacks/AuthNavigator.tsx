@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Login, ForgotPassword, Register } from "../../screens";
 import { ROUTE } from "../../constants";
+import { WelcomeScreen } from "../../screens/auth/welcomeScreen";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -10,7 +11,7 @@ export const AuthNavigator = () => {
   return (
     <Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={ROUTE.LOGIN}
+      initialRouteName={ROUTE.WELCOME_SCREEN}
     >
       <Screen name={ROUTE.LOGIN} component={Login} />
       <Screen
@@ -21,6 +22,11 @@ export const AuthNavigator = () => {
       <Screen
         name={ROUTE.FORGOT_PASSWORD}
         component={ForgotPassword}
+        options={{ headerShown: false }}
+      />
+      <Screen
+        name={ROUTE.WELCOME_SCREEN}
+        component={WelcomeScreen}
         options={{ headerShown: false }}
       />
     </Navigator>
