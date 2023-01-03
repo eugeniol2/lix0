@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, View } from "react-native";
+import { Image, View, KeyboardAvoidingView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -62,6 +62,7 @@ export const Login: React.FC = () => {
           <ControlledInput
             labelText="Senha"
             name="password"
+            autoCapitalize="none"
             secureTextEntry
             control={control}
             error={errors.password}
