@@ -57,7 +57,6 @@ export const Login: React.FC = () => {
             control={control}
             error={errors.email}
             autoCapitalize="none"
-            style={{ marginBottom: 16 }}
           />
           <ControlledInput
             labelText="Senha"
@@ -66,7 +65,6 @@ export const Login: React.FC = () => {
             secureTextEntry
             control={control}
             error={errors.password}
-            style={{ marginBottom: 16 }}
           />
         </InputsArea>
         <ButtonsArea>

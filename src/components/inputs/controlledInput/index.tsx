@@ -20,10 +20,14 @@ export const ControlledInput: React.FC<ControlledInputProps> = ({
         name={name}
         control={control}
         render={({ field: { onChange, value } }) => (
-          <MainInput onChangeText={onChange} value={value} {...rest} />
+          <MainInput
+            onChangeText={onChange}
+            value={value}
+            error={error}
+            {...rest}
+          />
         )}
       ></Controller>
-      {error && <Error>{error.message}</Error>}
     </>
   );
 };
