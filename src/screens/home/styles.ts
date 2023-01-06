@@ -1,17 +1,11 @@
-import styled, { css } from "styled-components/native";
-import { View, Text, Image, TouchableOpacityProps } from "react-native";
+import styled from "styled-components/native";
+import { Image } from "react-native";
+import { SafeAreaView as CustomSafeAreaView } from "react-native-safe-area-context";
 
-import { SafeAreaView as SafeAreaViewContext } from "react-native-safe-area-context";
-
-export interface HomeProps extends TouchableOpacityProps {
-  position: "left" | "right";
-}
-
-export const SafeAreaViewContainer = styled(SafeAreaViewContext)`
+export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   flex: 1;
   width: 100%;
   height: 100%;
-  /* padding: 0 16px 72px 16px; */
   justify-content: space-around;
   align-items: center;
 `;
@@ -46,8 +40,6 @@ export const IconsView = styled.View`
   flex-direction: row;
 `;
 
-export const CustomIcon = styled(Image)``;
-
 export const HomeBodyContainer = styled.View`
   flex: 1;
   width: 100%;
@@ -55,7 +47,7 @@ export const HomeBodyContainer = styled.View`
   justify-content: center;
 `;
 
-export const HomeSquareButtonsContainer = styled.View`
+export const HomeDashBoardContainer = styled.View`
   flex: 1;
   width: 100%;
   align-items: center;
@@ -74,7 +66,6 @@ export const NavigationButtonsContainer = styled.View`
 export const NavigationMenuSquare = styled.TouchableOpacity`
   width: 184px;
   height: 134px;
-  /* margin: 8px; */
   border-radius: 8px;
   justify-content: center;
   align-items: center;

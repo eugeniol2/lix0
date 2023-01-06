@@ -5,7 +5,7 @@ export interface HomeProps extends TouchableOpacityProps {
   position: "left" | "right";
 }
 
-export const SquareButtonText = styled.TouchableOpacity<HomeProps>`
+export const DashBoardButton = styled.TouchableOpacity<HomeProps>`
   height: 143px;
   width: 123px;
   justify-content: center;
@@ -29,11 +29,11 @@ export const SquareButtonText = styled.TouchableOpacity<HomeProps>`
     `};
 `;
 
-export const SquareButtonWrapper = styled.View`
+export const DashBoardContainer = styled.View`
   flex-direction: row;
 `;
 
-export const SquareText = styled.Text`
+export const CustomText = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.montserrato};
   font-size: ${({ theme }) => theme.SIZES.font_14px};
   font-weight: 700;
@@ -41,7 +41,7 @@ export const SquareText = styled.Text`
   margin-bottom: 8px;
 `;
 
-export const ShowPointsCircle = styled.View`
+export const ScoreCircle = styled.View`
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -52,13 +52,13 @@ export const ShowPointsCircle = styled.View`
   z-index: 99;
 `;
 
-export const ShowPointsCircleText = styled.Text`
+export const ScoreCircleText = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.montserrato};
   font-size: ${({ theme }) => theme.SIZES.font_14px};
   font-weight: 700;
 `;
 
-export const SquareButtonContent = styled.View`
+export const DashBoardButtonContent = styled.View`
   justify-content: space-between;
   align-items: center;
 `;

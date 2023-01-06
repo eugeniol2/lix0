@@ -1,23 +1,24 @@
-import { View, Text, Image } from "react-native";
 import React from "react";
+import { View, Text } from "react-native";
+import { ICONS, IMAGES } from "../../assets";
+import {
+  HomeNavigationBoxButton,
+  HomeDashBoard,
+  IconButton,
+} from "../../components";
 import {
   CustomImage,
   SafeAreaViewContainer,
   Name,
-  CustomIcon,
-  HomeProps,
-  HomeSquareButtonsContainer,
   NavigationButtonsContainer,
-  NavigationMenuSquare,
   UserInfoView,
   IconsView,
   HomeHeaderContainer,
   HomeBodyContainer,
+  HomeDashBoardContainer,
 } from "./styles";
-import { ICONS, IMAGES } from "../../assets";
-import { HomeNavigationBoxButton, HomeSquareButtons } from "../../components";
 
-export const Home: React.FC<HomeProps> = () => {
+export const Home: React.FC = () => {
   return (
     <>
       <SafeAreaViewContainer>
@@ -27,25 +28,63 @@ export const Home: React.FC<HomeProps> = () => {
             <Name>Jessica pereira</Name>
           </UserInfoView>
           <IconsView>
-            <CustomIcon source={ICONS.BellIcon} />
-            <CustomIcon source={ICONS.LogOutIcon} style={{ marginLeft: 16 }} />
+            <IconButton
+              iconOnPress={() => {
+                console.log("Bell icon pressed");
+              }}
+              iconPath={ICONS.BellIcon}
+            />
+            <IconButton
+              iconOnPress={() => {
+                console.log("LogOut icon pressed");
+              }}
+              iconPath={ICONS.LogOutIcon}
+              style={{ marginLeft: 16 }}
+            />
           </IconsView>
         </HomeHeaderContainer>
         <HomeBodyContainer>
-          <HomeSquareButtonsContainer>
-            <HomeSquareButtons userPointsValue="1200" />
-          </HomeSquareButtonsContainer>
+          <HomeDashBoardContainer>
+            <HomeDashBoard
+              userPointsValue="1200"
+              leftButtonOnPress={() => {
+                console.log("left button pressed");
+              }}
+              rightButtonOnPress={() => {
+                console.log("right button pressed");
+              }}
+            />
+          </HomeDashBoardContainer>
           <NavigationButtonsContainer>
             <HomeNavigationBoxButton
               title="Missões"
+              onPress={() => {
+                console.log("missões");
+              }}
               iconName={ICONS.StarSparkle}
             />
             <HomeNavigationBoxButton
               title="Coleta"
+              onPress={() => {
+                console.log("Coleta");
+              }}
               iconName={ICONS.SearchHomeIcon}
             />
-            <HomeNavigationBoxButton title="Cupons" iconName={ICONS.Coupon} />
-            <HomeNavigationBoxButton title="Quiz" iconName={ICONS.Quiz} />
+            <HomeNavigationBoxButton
+              title="Cupons"
+              iconName={ICONS.Coupon}
+              onPress={() => {
+                console.log("Cupons");
+              }}
+            />
+
+            <HomeNavigationBoxButton
+              title="Quiz"
+              iconName={ICONS.Quiz}
+              onPress={() => {
+                console.log("Quiz");
+              }}
+            />
           </NavigationButtonsContainer>
         </HomeBodyContainer>
       </SafeAreaViewContainer>

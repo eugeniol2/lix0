@@ -5,4 +5,5 @@ export const ROUTE = {
   WELCOME_SCREEN: "Welcome Screen",
 
   HOME: "Home",
+  PROFILE: "Profile",
 };
