@@ -9,6 +9,7 @@ import { RegisterInputArea, RegisterButtonArea } from "./styles";
 import { theme } from "../../../constants";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { IMAGES } from "../../../assets";
+import { useNavigation } from "@react-navigation/native";
 
 type RegisterData = {
   name: string;
@@ -18,6 +19,8 @@ type RegisterData = {
 };
 
 export const Register: React.FC = () => {
+  const navigation = useNavigation();
+
   const {
     control,
     handleSubmit,
@@ -58,7 +61,6 @@ export const Register: React.FC = () => {
             autoCapitalize="none"
             control={control}
             error={errors.name}
-            // style={{ marginBottom: 16 }}
           />
           <ControlledInput
             labelText="E-mail"
@@ -67,7 +69,6 @@ export const Register: React.FC = () => {
             keyboardType="email-address"
             control={control}
             error={errors.email}
-            // style={{ marginBottom: 16 }}
           />
           <ControlledInput
             labelText="Senha"
@@ -76,7 +77,6 @@ export const Register: React.FC = () => {
             secureTextEntry
             control={control}
             error={errors.password}
-            // style={{ marginBottom: 16 }}
           />
           <ControlledInput
             labelText="Repetir Senha"
@@ -85,7 +85,6 @@ export const Register: React.FC = () => {
             secureTextEntry
             control={control}
             error={errors.confirmPassword}
-            // style={{ marginBottom: 16 }}
           />
         </RegisterInputArea>
         <RegisterButtonArea>
@@ -100,6 +99,9 @@ export const Register: React.FC = () => {
             type="outlined"
             color={theme.COLORS.auxiliary_red}
             title="CANCELAR"
+            onPress={() => {
+              navigation.goBack();
+            }}
           />
         </RegisterButtonArea>
       </Container>

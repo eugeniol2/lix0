@@ -79,6 +79,9 @@ export const Login: React.FC = () => {
             type="outlined"
             color={theme.COLORS.primary_500}
             title="Cadastrar"
+            onPress={() => {
+              navigation.navigate("Register");
+            }}
           />
         </ButtonsArea>
       </Container>

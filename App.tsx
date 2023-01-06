@@ -18,6 +18,7 @@ export default function App() {
     InterMedium: require("./src/assets/fonts/Inter-Medium.ttf"),
     InterRegular: require("./src/assets/fonts/Inter-Regular.ttf"),
     InterLight: require("./src/assets/fonts/Inter-Light.ttf"),
+    Montserrat: require("./src/assets/fonts/Montserrat-VariableFont_wght.ttf"),
   });
 
   if (!loaded) return null;

@@ -6,7 +6,8 @@ import { AuthNavigator } from "./stacks/AuthNavigator";
 export const Routes = () => {
   const auth = useAuth();
 
-  if (!auth.email) {
+  if (auth.email) {
+    // (!auth.email)
     return <AuthNavigator />;
   }
 
