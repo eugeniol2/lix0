@@ -7,4 +7,5 @@ export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   height: 100%;
   justify-content: space-around;
   align-items: center;
+  padding: 16px;
 `;

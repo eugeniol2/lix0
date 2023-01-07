@@ -6,4 +6,6 @@ export const ROUTE = {
 
   HOME: "Home",
   PROFILE: "Profile",
+
+  TAB_NAVIGATOR: "Tab Navigator",
 };

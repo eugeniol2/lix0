@@ -88,7 +88,7 @@ export const Home: React.FC = () => {
           </NavigationButtonsContainer>
         </HomeBodyContainer>
       </SafeAreaViewContainer>
-      <View
+      {/* <View
         style={{
           height: 62,
           width: "100%",
@@ -98,7 +98,7 @@ export const Home: React.FC = () => {
         }}
       >
         <Text style={{ color: "white" }}>TabBarDummy</Text>
-      </View>
+      </View> */}
     </>
   );
 };

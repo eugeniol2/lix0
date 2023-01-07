@@ -7,7 +7,7 @@ export const Routes = () => {
   const auth = useAuth();
 
   if (auth.email) {
-    // (!auth.email)
+    // !auth.email;
     return <AuthNavigator />;
   }
 
