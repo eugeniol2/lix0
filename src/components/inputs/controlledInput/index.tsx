@@ -27,7 +27,7 @@ export const ControlledInput: React.FC<ControlledInputProps> = ({
             {...rest}
           />
         )}
-      ></Controller>
+      />
     </>
   );
 };

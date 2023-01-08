@@ -11,4 +11,8 @@ export const ICONS = {
   SearchHomeIcon: require("../assets/icons/interface-search.png"),
   Coupon: require("../assets/icons/shopping-store-discount-percent-coupon.png"),
   Quiz: require("../assets/icons/interface-help-question-chat-bubble-rectangle.png"),
+  BirthDay: require("../assets/icons/detailsBirthDay.png"),
+  email: require("../assets/icons/carbon_email.png"),
+  detailsPerson: require("../assets/icons/detailsPerson.png"),
+  home: require("../assets//icons/homeicon.png"),
 };

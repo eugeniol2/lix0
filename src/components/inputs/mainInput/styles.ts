@@ -1,6 +1,7 @@
 import { FieldError } from "react-hook-form";
 import styled, { css } from "styled-components/native";
 import { theme } from "../../../constants";
+import MaskInput from "react-native-mask-input";
 
 interface InputProps {
   isFocused: boolean;
@@ -44,7 +45,7 @@ export const LabelText = styled.Text<InputProps>`
     `};
 `;
 
-export const Input = styled.TextInput<InputProps>`
+export const Input = styled(MaskInput)<InputProps>`
   width: 100%;
   height: 41px;
   padding: 8px 16px;
