@@ -3,6 +3,7 @@ import {
   Text,
   TextInputChangeEventData,
 } from "react-native";
+import "moment/locale/pt-br";
 import React from "react";
 import {
   CustomImageProfile,
@@ -22,25 +23,31 @@ import { Masks } from "react-native-mask-input";
 type ProfileData = {
   name: string;
   email: string;
-  birthDay: string;
+  birthDate: Date | undefined;
   location: string;
 };
 
 export const Profile = () => {
+  var moment = require("moment");
   const {
     control,
     handleSubmit,
-    register,
     formState: { errors },
   } = useForm<ProfileData>({
     defaultValues: {
       name: "",
       email: "",
-      birthDay: "",
+      birthDate: undefined,
       location: "",
     },
     resolver: yupResolver(profileSchema),
   });
+
+  // function isDateInTheFuture({ inputDate }: { inputDate: Date }) {
+  //   const inputDateData = moment(inputDate, "DD-MM-YYYY").format("DD/MM/YYYY");
+  //   const isFuture = inputDateData.isBefore(moment().format("DD/MM/YYYY"));
+  //   return isFuture;
+  // }
 
   function HandleSaveProfileData(data: ProfileData) {
     console.log(data);
@@ -84,15 +91,16 @@ export const Profile = () => {
           name="email"
           iconPath={ICONS.email}
           placeholder="email"
+          keyboardType="email-address"
           isProfile
         />
         <ControlledInput
           control={control}
-          error={errors.birthDay}
-          name="birthDay"
+          error={errors.birthDate}
+          name="birthDate"
           iconPath={ICONS.BirthDay}
           placeholder="Data de nascimento 10/01/1999"
-          keyboardType="numeric"
+          // keyboardType="numeric"
           autoComplete="birthdate-full"
           isProfile
           mask={Masks.DATE_DDMMYYYY}

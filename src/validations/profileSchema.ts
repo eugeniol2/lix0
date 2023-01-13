@@ -1,14 +1,18 @@
 import * as yup from "yup";
 import { validateData } from "./regex/regex";
 
+var moment = require("moment");
+
 export const profileSchema = yup.object({
   name: yup.string(),
   email: yup.string().email("E-mail inválido"),
   birthDate: yup
     .date()
+
+    .min(new Date(1900, 0, 1), "Você deve ter nascido após 1900")
     .max(
       new Date().toLocaleDateString(),
-      "Não é possível incluir uma data futura"
+      "A data correspondente está no futuro"
     ),
 
   location: yup.string(),

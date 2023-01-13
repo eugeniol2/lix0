@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text } from "react-native";
 import { ICONS, IMAGES } from "../../assets";
@@ -6,6 +7,7 @@ import {
   HomeDashBoard,
   IconButton,
 } from "../../components";
+import { ROUTE } from "../../constants";
 import {
   CustomImage,
   SafeAreaViewContainer,
@@ -19,6 +21,8 @@ import {
 } from "./styles";
 
 export const Home: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <>
       <SafeAreaViewContainer>
@@ -47,10 +51,11 @@ export const Home: React.FC = () => {
           <HomeDashBoardContainer>
             <HomeDashBoard
               userPointsValue="1200"
-              leftButtonOnPress={() => {
+              rankingButton={() => {
                 console.log("left button pressed");
+                navigation.navigate("Ranking");
               }}
-              rightButtonOnPress={() => {
+              missionsButton={() => {
                 console.log("right button pressed");
               }}
             />
@@ -88,17 +93,6 @@ export const Home: React.FC = () => {
           </NavigationButtonsContainer>
         </HomeBodyContainer>
       </SafeAreaViewContainer>
-      {/* <View
-        style={{
-          height: 62,
-          width: "100%",
-          backgroundColor: "purple",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ color: "white" }}>TabBarDummy</Text>
-      </View> */}
     </>
   );
 };

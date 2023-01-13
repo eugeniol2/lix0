@@ -14,25 +14,25 @@ import {
 
 export interface HomeSquareButtonsProps {
   userPointsValue: string;
-  leftButtonOnPress?: () => void;
-  rightButtonOnPress?: () => void;
+  rankingButton?: () => void;
+  missionsButton?: () => void;
 }
 
 export const HomeDashBoard: React.FC<HomeSquareButtonsProps> = ({
   userPointsValue,
-  leftButtonOnPress,
-  rightButtonOnPress,
+  rankingButton,
+  missionsButton,
 }) => {
   return (
     <>
       <DashBoardContainer>
-        <DashBoardButton position="left" onPress={leftButtonOnPress}>
+        <DashBoardButton position="left" onPress={rankingButton}>
           <DashBoardButtonContent>
             <CustomText>Ranking</CustomText>
             <TrophyIcon name="trophy" size={42} color="white" />
           </DashBoardButtonContent>
         </DashBoardButton>
-        <DashBoardButton position="right" onPress={rightButtonOnPress}>
+        <DashBoardButton position="right" onPress={missionsButton}>
           <DashBoardButtonContent>
             <CustomText>Missões</CustomText>
             <PaperIcon name="newspaper-outline" size={30} color="white" />

@@ -1,12 +1,12 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Login, ForgotPassword, Register } from "../../screens";
+import { Login, ForgotPassword, Register, Ranking } from "../../screens";
 import { ROUTE } from "../../constants";
 import { WelcomeScreen } from "../../screens/auth/welcomeScreen";
 
 const { Navigator, Screen } = createStackNavigator();
 
-export const AuthNavigator = () => {
+export const AuthStack = () => {
   console.log(Navigator);
   return (
     <Navigator

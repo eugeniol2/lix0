@@ -5,6 +5,7 @@ export declare global {
       Register: undefined;
       Login: undefined;
       Home: undefined;
+      Ranking: undefined;
     }
   }
 }

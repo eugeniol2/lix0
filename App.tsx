@@ -2,7 +2,7 @@ import "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { AuthNavigator } from "./src/routes/stacks/AuthNavigator";
+import { AuthNavigator } from "./src/routes/stacks/AuthStack";
 import { useFonts } from "expo-font";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/constants";

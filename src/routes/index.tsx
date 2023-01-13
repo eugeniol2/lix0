@@ -1,15 +1,15 @@
 import React from "react";
 import { useAuth } from "../context/authProvider/useAuth";
-import { AppNavigator } from "./stacks/AppNavigator";
-import { AuthNavigator } from "./stacks/AuthNavigator";
+import { AuthStack } from "./stacks/AuthStack";
+import { TabNavigator } from "./stacks/TabNavigator";
 
 export const Routes = () => {
   const auth = useAuth();
 
   if (auth.email) {
     // !auth.email;
-    return <AuthNavigator />;
+    return <AuthStack />;
   }
 
-  return <AppNavigator />;
+  return <TabNavigator />;
 };
