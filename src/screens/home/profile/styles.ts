@@ -1,6 +1,6 @@
-import styled from "styled-components/native";
-import { SafeAreaView as CustomSafeAreaView } from "react-native-safe-area-context";
-import { CustomImage } from "../styles";
+import styled from 'styled-components/native'
+import { SafeAreaView as CustomSafeAreaView } from 'react-native-safe-area-context'
+import { CustomImage } from '../styles'
 
 export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   flex: 1;
@@ -9,29 +9,29 @@ export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   justify-content: space-around;
   align-items: center;
   padding: 16px;
-`;
+`
 
 export const CustomImageProfile = styled(CustomImage)`
   width: 163px;
   height: 163px;
   border-radius: 999px;
-`;
+`
 
 export const HeaderContainer = styled.View`
   flex: 0.9;
   width: 100%;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ProfileFormContainer = styled.View`
   margin: 24px 0 24px 0;
   flex: 0.75;
   width: 100%;
-`;
+`
 
 export const ProfileFooter = styled.View`
   width: 100%;
   justify-content: center;
   align-items: center;
-`;
+`

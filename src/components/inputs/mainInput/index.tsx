@@ -1,24 +1,17 @@
-import {
-  ImageSourcePropType,
-  TextInputProps,
-  Image,
-  View,
-  Text,
-} from "react-native";
-import React, { useState } from "react";
-import { MaskInputProps, Masks } from "react-native-mask-input";
-import { Container, Input, LabelText } from "./styles";
-import { FieldError } from "react-hook-form";
-import { Error } from "./styles";
+import { ImageSourcePropType, TextInputProps, Image, View } from 'react-native'
+import React, { useState } from 'react'
+import { MaskInputProps } from 'react-native-mask-input'
+import { Container, Input, LabelText, Error } from './styles'
+import { FieldError } from 'react-hook-form'
 
 export type MainInputProps = TextInputProps &
   MaskInputProps & {
-    value?: string;
-    labelText?: string;
-    error?: FieldError;
-    isProfile?: boolean;
-    iconPath?: ImageSourcePropType;
-  };
+    value?: string
+    labelText?: string
+    error?: FieldError
+    isProfile?: boolean
+    iconPath?: ImageSourcePropType
+  }
 
 export const MainInput: React.FC<MainInputProps> = ({
   value,
@@ -28,15 +21,15 @@ export const MainInput: React.FC<MainInputProps> = ({
   iconPath,
   ...rest
 }) => {
-  const [isFocused, setIsFocused] = useState(false);
+  const [isFocused, setIsFocused] = useState(false)
 
   const handleInputFocus = () => {
-    setIsFocused(true);
-  };
+    setIsFocused(true)
+  }
 
   const handleInputBlur = () => {
-    setIsFocused(false);
-  };
+    setIsFocused(false)
+  }
 
   return (
     <>
@@ -47,8 +40,8 @@ export const MainInput: React.FC<MainInputProps> = ({
           <>
             <View
               style={{
-                position: "absolute",
-                marginLeft: 4,
+                position: 'absolute',
+                marginLeft: 4
               }}
             >
               <Image source={iconPath} />
@@ -65,9 +58,9 @@ export const MainInput: React.FC<MainInputProps> = ({
           placeholder="teste"
           {...rest}
         />
-        {error && !isProfile && <Error>{error.message}</Error>}
+        {error != null && !isProfile && <Error>{error.message}</Error>}
       </Container>
-      {error && isProfile && <Error>{error.message}</Error>}
+      {error != null && isProfile && <Error>{error.message}</Error>}
     </>
-  );
-};
+  )
+}

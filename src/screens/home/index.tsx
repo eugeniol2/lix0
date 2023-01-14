@@ -1,11 +1,11 @@
-import { useNavigation } from "@react-navigation/native";
-import React from "react";
-import { ICONS, IMAGES } from "../../assets";
+import { useNavigation } from '@react-navigation/native'
+import React from 'react'
+import { ICONS, IMAGES } from '../../assets'
 import {
   HomeNavigationBoxButton,
   HomeDashBoard,
-  IconButton,
-} from "../../components";
+  IconButton
+} from '../../components'
 
 import {
   CustomImage,
@@ -16,11 +16,11 @@ import {
   IconsView,
   HomeHeaderContainer,
   HomeBodyContainer,
-  HomeDashBoardContainer,
-} from "./styles";
+  HomeDashBoardContainer
+} from './styles'
 
 export const Home: React.FC = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   return (
     <>
@@ -33,13 +33,13 @@ export const Home: React.FC = () => {
           <IconsView>
             <IconButton
               iconOnPress={() => {
-                console.log("Bell icon pressed");
+                // console.log('Bell icon pressed')
               }}
               iconPath={ICONS.BellIcon}
             />
             <IconButton
               iconOnPress={() => {
-                console.log("LogOut icon pressed");
+                // console.log('LogOut icon pressed')
               }}
               iconPath={ICONS.LogOutIcon}
               style={{ marginLeft: 16 }}
@@ -51,11 +51,11 @@ export const Home: React.FC = () => {
             <HomeDashBoard
               userPointsValue="1200"
               rankingButton={() => {
-                console.log("left button pressed");
-                navigation.navigate("Ranking");
+                // console.log('left button pressed')
+                navigation.navigate('Ranking')
               }}
               missionsButton={() => {
-                console.log("right button pressed");
+                // console.log('right button pressed')
               }}
             />
           </HomeDashBoardContainer>
@@ -63,14 +63,14 @@ export const Home: React.FC = () => {
             <HomeNavigationBoxButton
               title="Missões"
               onPress={() => {
-                console.log("missões");
+                // console.log('missões')
               }}
               iconName={ICONS.StarSparkle}
             />
             <HomeNavigationBoxButton
               title="Coleta"
               onPress={() => {
-                console.log("Coleta");
+                // console.log('Coleta')
               }}
               iconName={ICONS.SearchHomeIcon}
             />
@@ -78,7 +78,7 @@ export const Home: React.FC = () => {
               title="Cupons"
               iconName={ICONS.Coupon}
               onPress={() => {
-                console.log("Cupons");
+                // console.log('Cupons')
               }}
             />
 
@@ -86,12 +86,12 @@ export const Home: React.FC = () => {
               title="Quiz"
               iconName={ICONS.Quiz}
               onPress={() => {
-                console.log("Quiz");
+                // console.log('Quiz')
               }}
             />
           </NavigationButtonsContainer>
         </HomeBodyContainer>
       </SafeAreaViewContainer>
     </>
-  );
-};
+  )
+}

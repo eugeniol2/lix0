@@ -1,27 +1,27 @@
-import React from "react";
-import TrophyIcon from "react-native-vector-icons/EvilIcons";
-import PaperIcon from "react-native-vector-icons/Ionicons";
-import { Image } from "react-native";
-import { ICONS } from "../../assets";
+import React from 'react'
+import TrophyIcon from 'react-native-vector-icons/EvilIcons'
+import PaperIcon from 'react-native-vector-icons/Ionicons'
+import { Image } from 'react-native'
+import { ICONS } from '../../assets'
 import {
   CustomText,
   DashBoardButton,
   DashBoardButtonContent,
   DashBoardContainer,
   ScoreCircle,
-  ScoreCircleText,
-} from "./styles";
+  ScoreCircleText
+} from './styles'
 
 export interface HomeSquareButtonsProps {
-  userPointsValue: string;
-  rankingButton?: () => void;
-  missionsButton?: () => void;
+  userPointsValue: string
+  rankingButton?: () => void
+  missionsButton?: () => void
 }
 
 export const HomeDashBoard: React.FC<HomeSquareButtonsProps> = ({
   userPointsValue,
   rankingButton,
-  missionsButton,
+  missionsButton
 }) => {
   return (
     <>
@@ -45,5 +45,5 @@ export const HomeDashBoard: React.FC<HomeSquareButtonsProps> = ({
         <Image source={ICONS.TrashBag} resizeMode="contain" />
       </ScoreCircle>
     </>
-  );
-};
+  )
+}

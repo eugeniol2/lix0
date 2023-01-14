@@ -1,7 +1,9 @@
-import { StyleSheet, Text, TouchableOpacityProps, View } from "react-native";
-import { TouchableOpacityButton, TouchableOpacityButtonTitle } from "./styles";
-import React from "react";
-import { MainButtonProps } from "./styles";
+import {
+  TouchableOpacityButton,
+  TouchableOpacityButtonTitle,
+  MainButtonProps
+} from './styles'
+import React from 'react'
 
 export const MainButton: React.FC<MainButtonProps> = ({
   title,
@@ -15,5 +17,5 @@ export const MainButton: React.FC<MainButtonProps> = ({
         {title}
       </TouchableOpacityButtonTitle>
     </TouchableOpacityButton>
-  );
-};
+  )
+}
