@@ -4,6 +4,7 @@ import { ControlledInput } from "./inputs/controlledInput";
 import { HomeDashBoard } from "./homeDashBoard";
 import { HomeNavigationBoxButton } from "./homeNavigationBoxButton";
 import { IconButton } from "./iconButton";
+import { ScrollViewMissionItem } from "./scrollViewMissionItem";
 
 export {
   MainButton,
@@ -12,4 +13,5 @@ export {
   HomeDashBoard,
   HomeNavigationBoxButton,
   IconButton,
+  ScrollViewMissionItem,
 };

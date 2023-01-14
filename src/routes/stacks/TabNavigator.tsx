@@ -15,7 +15,7 @@ export const TabNavigator = () => {
       // initialRouteName={ROUTE.HOME}
     >
       <Screen name="Home" component={HomeStack} />
-      <Screen name="Profile" component={Profile} />
+      <Screen name="Perfil" component={Profile} />
     </Navigator>
   );
 };

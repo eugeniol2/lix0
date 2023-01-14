@@ -1,13 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Text } from "react-native";
 import { ICONS, IMAGES } from "../../assets";
 import {
   HomeNavigationBoxButton,
   HomeDashBoard,
   IconButton,
 } from "../../components";
-import { ROUTE } from "../../constants";
+
 import {
   CustomImage,
   SafeAreaViewContainer,
