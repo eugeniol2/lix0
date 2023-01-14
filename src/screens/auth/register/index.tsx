@@ -1,42 +1,46 @@
-import { View, Text, Image } from "react-native";
-import React from "react";
-import { Container, RegisterImageWrapper } from "./styles";
-import { ControlledInput, MainButton } from "../../../components";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { registerSchema } from "../../../validations/registerSchema";
-import { RegisterInputArea, RegisterButtonArea } from "./styles";
-import { theme } from "../../../constants";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { IMAGES } from "../../../assets";
-import { useNavigation } from "@react-navigation/native";
+import { Text, Image } from 'react-native'
+import React from 'react'
+import {
+  Container,
+  RegisterImageWrapper,
+  RegisterInputArea,
+  RegisterButtonArea
+} from './styles'
+import { ControlledInput, MainButton } from '../../../components'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { registerSchema } from '../../../validations/registerSchema'
+import { theme } from '../../../constants'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { IMAGES } from '../../../assets'
+import { useNavigation } from '@react-navigation/native'
 
-type RegisterData = {
-  name: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-};
+interface RegisterData {
+  name: string
+  email: string
+  password: string
+  confirmPassword: string
+}
 
 export const Register: React.FC = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<RegisterData>({
     defaultValues: {
-      name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
     },
-    resolver: yupResolver(registerSchema),
-  });
+    resolver: yupResolver(registerSchema)
+  })
 
   function handleRegisterUser(data: RegisterData) {
-    console.log(data);
+    // console.log(data)
   }
 
   return (
@@ -49,7 +53,7 @@ export const Register: React.FC = () => {
           style={{
             fontFamily: theme.FONTS.interbold,
             paddingVertical: 16,
-            width: "100%",
+            width: '100%'
           }}
         >
           Por favor, preencha os campos abaixo para realizar o cadastro.
@@ -92,7 +96,7 @@ export const Register: React.FC = () => {
             type="contained"
             color={theme.COLORS.secondary_500}
             title="CADASTRAR"
-            onPress={handleSubmit(handleRegisterUser)}
+            onPress={() => handleSubmit(handleRegisterUser)}
             style={{ marginBottom: 16 }}
           />
           <MainButton
@@ -100,11 +104,11 @@ export const Register: React.FC = () => {
             color={theme.COLORS.auxiliary_red}
             title="CANCELAR"
             onPress={() => {
-              navigation.goBack();
+              navigation.goBack()
             }}
           />
         </RegisterButtonArea>
       </Container>
     </SafeAreaView>
-  );
-};
+  )
+}

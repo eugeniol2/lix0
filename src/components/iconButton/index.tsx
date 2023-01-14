@@ -1,14 +1,10 @@
-import {
-  Image,
-  ImageSourcePropType,
-  TouchableOpacityProps,
-} from "react-native";
-import React from "react";
-import { IconButtonContainer } from "./styles";
+import { Image, ImageSourcePropType, TouchableOpacityProps } from 'react-native'
+import React from 'react'
+import { IconButtonContainer } from './styles'
 
 interface IconButtonProps extends TouchableOpacityProps {
-  iconPath: ImageSourcePropType;
-  iconOnPress: () => void;
+  iconPath: ImageSourcePropType
+  iconOnPress: () => void
 }
 
 export const IconButton: React.FC<IconButtonProps> = ({
@@ -20,5 +16,5 @@ export const IconButton: React.FC<IconButtonProps> = ({
     <IconButtonContainer onPress={iconOnPress} {...rest}>
       <Image source={iconPath} />
     </IconButtonContainer>
-  );
-};
+  )
+}

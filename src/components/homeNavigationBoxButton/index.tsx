@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
-import { CustomText, NavigationMenuSquare } from "./styles";
-
-import { HomeNavigationBoxButtonProps } from "./styles";
-import { ICONS } from "../../assets";
+import { Image } from 'react-native'
+import React from 'react'
+import {
+  CustomText,
+  NavigationMenuSquare,
+  HomeNavigationBoxButtonProps
+} from './styles'
 
 export const HomeNavigationBoxButton: React.FC<
   HomeNavigationBoxButtonProps
@@ -13,5 +14,5 @@ export const HomeNavigationBoxButton: React.FC<
       <Image source={iconName} resizeMode="contain" />
       <CustomText title={title}>{title}</CustomText>
     </NavigationMenuSquare>
-  );
-};
+  )
+}

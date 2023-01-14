@@ -1,17 +1,16 @@
-import { FieldError } from "react-hook-form";
-import styled, { css } from "styled-components/native";
-import { theme } from "../../../constants";
-import MaskInput from "react-native-mask-input";
+import { FieldError } from 'react-hook-form'
+import styled, { css } from 'styled-components/native'
+import MaskInput from 'react-native-mask-input'
 
 interface InputProps {
-  isFocused: boolean;
-  hasError?: FieldError | undefined;
-  isProfile?: boolean;
+  isFocused: boolean
+  hasError?: FieldError | undefined
+  isProfile?: boolean
 }
 
 interface ContainerProps {
-  hasError: FieldError | undefined;
-  isProfile?: boolean;
+  hasError: FieldError | undefined
+  isProfile?: boolean
 }
 
 export const Container = styled.View<ContainerProps>`
@@ -19,7 +18,7 @@ export const Container = styled.View<ContainerProps>`
   margin-bottom: 16px;
 
   ${({ hasError }) =>
-    hasError &&
+    hasError != null &&
     css`
       margin-bottom: 8px;
     `};
@@ -30,7 +29,7 @@ export const Container = styled.View<ContainerProps>`
       flex-direction: row;
       align-items: center;
     `}
-`;
+`
 
 export const LabelText = styled.Text<InputProps>`
   font-family: ${({ theme }) => theme.FONTS.intermedium};
@@ -43,7 +42,7 @@ export const LabelText = styled.Text<InputProps>`
     css`
       color: ${({ theme }) => theme.COLORS.secondary_500};
     `};
-`;
+`
 
 export const Input = styled(MaskInput)<InputProps>`
   width: 100%;
@@ -60,7 +59,7 @@ export const Input = styled(MaskInput)<InputProps>`
   font-family: ${({ theme }) => theme.FONTS.intermedium};
 
   ${({ hasError }) =>
-    hasError &&
+    hasError != null &&
     css`
       border-color: ${({ theme }) => theme.COLORS.auxiliary_red};
       border-bottom-color: ${({ theme }) => theme.COLORS.auxiliary_red};
@@ -78,8 +77,8 @@ export const Input = styled(MaskInput)<InputProps>`
       border-bottom-width: 1px;
       padding-left: 34px;
     `}
-`;
+`
 
 export const Error = styled.Text`
   color: ${({ theme }) => theme.COLORS.auxiliary_red};
-`;
+`

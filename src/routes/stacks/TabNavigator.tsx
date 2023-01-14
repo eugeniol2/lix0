@@ -1,12 +1,9 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { Home, Profile, Ranking } from "../../screens";
-import { ROUTE } from "../../constants";
-import { HomeStack } from "./HomeStack";
-import { AuthStack } from "./AuthStack";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react'
+import { Profile } from '../../screens'
+import { HomeStack } from './HomeStack'
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const { Navigator, Screen } = createBottomTabNavigator()
 
 export const TabNavigator = () => {
   return (
@@ -17,5 +14,5 @@ export const TabNavigator = () => {
       <Screen name="Home" component={HomeStack} />
       <Screen name="Perfil" component={Profile} />
     </Navigator>
-  );
-};
+  )
+}

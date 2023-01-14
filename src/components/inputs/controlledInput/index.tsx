@@ -1,12 +1,12 @@
-import { Controller, Control, FieldError } from "react-hook-form";
-import { MainInput, MainInputProps } from "../mainInput";
-import { Error } from "./styles";
+import React from 'react'
+import { Controller, Control, FieldError } from 'react-hook-form'
+import { MainInput, MainInputProps } from '../mainInput'
 
 type ControlledInputProps = MainInputProps & {
-  control: Control<any>;
-  name: string;
-  error?: FieldError;
-};
+  control: Control<any>
+  name: string
+  error?: FieldError
+}
 
 export const ControlledInput: React.FC<ControlledInputProps> = ({
   control,
@@ -29,5 +29,5 @@ export const ControlledInput: React.FC<ControlledInputProps> = ({
         )}
       />
     </>
-  );
-};
+  )
+}

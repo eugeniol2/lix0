@@ -1,47 +1,42 @@
-import {
-  NativeSyntheticEvent,
-  Text,
-  TextInputChangeEventData,
-} from "react-native";
-import "moment/locale/pt-br";
-import React from "react";
+import { Text } from 'react-native'
+import 'moment/locale/pt-br'
+import React from 'react'
 import {
   CustomImageProfile,
   HeaderContainer,
   ProfileFooter,
   ProfileFormContainer,
-  SafeAreaViewContainer,
-} from "./styles";
-import { ControlledInput, MainButton } from "../../../components";
-import { theme } from "../../../constants";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm } from "react-hook-form";
-import { profileSchema } from "../../../validations/profileSchema";
-import { ICONS, IMAGES } from "../../../assets";
-import { Masks } from "react-native-mask-input";
+  SafeAreaViewContainer
+} from './styles'
+import { theme } from '../../../constants'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useForm } from 'react-hook-form'
+import { profileSchema } from '../../../validations/profileSchema'
+import { ICONS, IMAGES } from '../../../assets'
+import { Masks } from 'react-native-mask-input'
+import { ControlledInput, MainButton } from 'components'
 
-type ProfileData = {
-  name: string;
-  email: string;
-  birthDate: Date | undefined;
-  location: string;
-};
+interface ProfileData {
+  name: string
+  email: string
+  birthDate: Date | undefined
+  location: string
+}
 
 export const Profile = () => {
-  var moment = require("moment");
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<ProfileData>({
     defaultValues: {
-      name: "",
-      email: "",
+      name: '',
+      email: '',
       birthDate: undefined,
-      location: "",
+      location: ''
     },
-    resolver: yupResolver(profileSchema),
-  });
+    resolver: yupResolver(profileSchema)
+  })
 
   // function isDateInTheFuture({ inputDate }: { inputDate: Date }) {
   //   const inputDateData = moment(inputDate, "DD-MM-YYYY").format("DD/MM/YYYY");
@@ -50,20 +45,20 @@ export const Profile = () => {
   // }
 
   function HandleSaveProfileData(data: ProfileData) {
-    console.log(data);
+    // console.log(data)
   }
 
-  function normalizeBirthDayData(value: string) {
-    console.log(value);
-  }
+  // function normalizeBirthDayData(value: string) {
+  //   console.log(value)
+  // }
   return (
     <SafeAreaViewContainer>
       <HeaderContainer>
         <CustomImageProfile source={IMAGES.notRealPersonImage} />
         <Text
-          style={{ textDecorationLine: "underline" }}
+          style={{ textDecorationLine: 'underline' }}
           onPress={() => {
-            console.log("Trocar foto");
+            // console.log('Trocar foto')
           }}
         >
           Trocar foto
@@ -73,7 +68,7 @@ export const Profile = () => {
         color={theme.COLORS.secondary_500}
         title="DETALHES"
         onPress={() => {
-          console.log("profile Detalhes");
+          // console.log('profile Detalhes')
         }}
       />
       <ProfileFormContainer>
@@ -118,7 +113,7 @@ export const Profile = () => {
         <MainButton
           color={theme.COLORS.secondary_500}
           title="SALVAR"
-          onPress={handleSubmit(HandleSaveProfileData)}
+          onPress={() => handleSubmit(HandleSaveProfileData)}
         />
         <MainButton
           color={theme.COLORS.secondary_500}
@@ -126,7 +121,7 @@ export const Profile = () => {
           title="ALTERAR SENHA"
           style={{ marginTop: 12 }}
           onPress={() => {
-            console.log("ALTERAR SENHA");
+            // console.log('ALTERAR SENHA')
           }}
         />
         <Text style={{ marginTop: 8 }}>
@@ -134,17 +129,17 @@ export const Profile = () => {
         </Text>
         <Text
           style={{
-            textDecorationLine: "underline",
+            textDecorationLine: 'underline',
             marginTop: 4,
-            color: `${theme.COLORS.primary_500}`,
+            color: `${theme.COLORS.primary_500}`
           }}
           onPress={() => {
-            console.log("Política de privacidade");
+            // console.log('Política de privacidade')
           }}
         >
           Política de privacidade
         </Text>
       </ProfileFooter>
     </SafeAreaViewContainer>
-  );
-};
+  )
+}

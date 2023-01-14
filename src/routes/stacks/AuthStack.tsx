@@ -1,13 +1,13 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { Login, ForgotPassword, Register, Ranking } from "../../screens";
-import { ROUTE } from "../../constants";
-import { WelcomeScreen } from "../../screens/auth/welcomeScreen";
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import { Login, ForgotPassword, Register } from '../../screens'
+import { ROUTE } from '../../constants'
+import { WelcomeScreen } from '../../screens/auth/welcomeScreen'
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator()
 
 export const AuthStack = () => {
-  console.log(Navigator);
+  // console.log(Navigator)
   return (
     <Navigator
       screenOptions={{ headerShown: false }}
@@ -30,5 +30,5 @@ export const AuthStack = () => {
         options={{ headerShown: false }}
       />
     </Navigator>
-  );
-};
+  )
+}
