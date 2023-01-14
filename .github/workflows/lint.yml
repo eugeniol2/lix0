@@ -1,0 +1,16 @@
+name: Build
+on: [push]
+jobs:
+  eslint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install modules
+        run: yarn
+
+      - name: Run ESLint
+        run: yarn eslint ./src --ext .ts,.tsx
