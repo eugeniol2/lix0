@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
-import { IMAGES } from "../../../assets";
-import { ButtonsArea, Container, ImageWrapper } from "./styles";
-import { MainButton } from "../../../components";
-import { theme } from "../../../constants";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useNavigation } from "@react-navigation/native";
+import { Image } from 'react-native'
+import React from 'react'
+import { IMAGES } from '../../../assets'
+import { ButtonsArea, Container, ImageWrapper } from './styles'
+import { MainButton } from '../../../components'
+import { theme } from '../../../constants'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { useNavigation } from '@react-navigation/native'
 
 export const WelcomeScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -22,16 +22,20 @@ export const WelcomeScreen = () => {
             title="LOGIN"
             type="outlined"
             style={{ marginBottom: 16 }}
-            onPress={() => navigation.navigate("Login")}
+            onPress={() => {
+              navigation.navigate('Login')
+            }}
           />
           <MainButton
             color={theme.COLORS.primary_500}
             title="REGISTER"
             type="contained"
-            onPress={() => navigation.navigate("Register")}
+            onPress={() => {
+              navigation.navigate('Register')
+            }}
           />
         </ButtonsArea>
       </Container>
     </SafeAreaView>
-  );
-};
+  )
+}

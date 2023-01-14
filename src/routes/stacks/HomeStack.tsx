@@ -1,14 +1,12 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import { ROUTE } from "../../constants";
-import { Home, Ranking } from "../../screens";
-import { Profile } from "../../screens/home/profile";
-import { TabNavigator } from "./TabNavigator";
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack'
+import { ROUTE } from '../../constants'
+import { Home, Ranking } from '../../screens'
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator()
 
 export const HomeStack: React.FC = () => {
-  console.log(Navigator);
+  // console.log(Navigator)
   return (
     <>
       <Navigator screenOptions={{ headerShown: false }}>
@@ -16,5 +14,5 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.RANKING} component={Ranking} />
       </Navigator>
     </>
-  );
-};
+  )
+}

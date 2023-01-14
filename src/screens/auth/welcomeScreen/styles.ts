@@ -1,5 +1,4 @@
-import styled from "styled-components/native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import styled from 'styled-components/native'
 
 export const Container = styled.View`
   flex: 1;
@@ -7,13 +6,13 @@ export const Container = styled.View`
   flex-direction: column;
   padding-bottom: 76px;
   padding: 0 16px 72px 16px;
-`;
+`
 
 export const ImageWrapper = styled.View`
   flex: 1;
   justify-content: center;
-`;
+`
 
 export const ButtonsArea = styled.View`
   width: 100%;
-`;
+`

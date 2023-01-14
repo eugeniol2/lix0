@@ -1,10 +1,10 @@
-import { MainButton } from "./mainButton";
-import { MainInput } from "./inputs/mainInput";
-import { ControlledInput } from "./inputs/controlledInput";
-import { HomeDashBoard } from "./homeDashBoard";
-import { HomeNavigationBoxButton } from "./homeNavigationBoxButton";
-import { IconButton } from "./iconButton";
-import { ScrollViewMissionItem } from "./scrollViewMissionItem";
+import { MainButton } from './mainButton'
+import { MainInput } from './inputs/mainInput'
+import { ControlledInput } from './inputs/controlledInput'
+import { HomeDashBoard } from './homeDashBoard'
+import { HomeNavigationBoxButton } from './homeNavigationBoxButton'
+import { IconButton } from './iconButton'
+import { ScrollViewMissionItem } from './scrollViewMissionItem'
 
 export {
   MainButton,
@@ -13,5 +13,5 @@ export {
   HomeDashBoard,
   HomeNavigationBoxButton,
   IconButton,
-  ScrollViewMissionItem,
-};
+  ScrollViewMissionItem
+}

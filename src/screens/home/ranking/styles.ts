@@ -1,6 +1,5 @@
-import styled from "styled-components/native";
-import { Image } from "react-native";
-import { SafeAreaView as CustomSafeAreaView } from "react-native-safe-area-context";
+import styled from 'styled-components/native'
+import { SafeAreaView as CustomSafeAreaView } from 'react-native-safe-area-context'
 
 export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   flex: 1;
@@ -10,4 +9,4 @@ export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   align-items: center;
 
   padding: 16px;
-`;
+`

@@ -1,45 +1,44 @@
-import React, { useState } from "react";
-import { Image, View, KeyboardAvoidingView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { IMAGES } from "../../../assets";
-import { Container, ImageWrapper, ButtonsArea, InputsArea } from "./styles";
-import { MainButton, ControlledInput } from "../../../components";
-import { theme } from "../../../constants";
-import { loginSchema } from "../../../validations/loginSchema";
-import { useNavigation } from "@react-navigation/native";
-import { useAuth } from "../../../context/authProvider/useAuth";
+import React from 'react'
+import { Image } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { IMAGES } from '../../../assets'
+import { Container, ImageWrapper, ButtonsArea, InputsArea } from './styles'
+import { MainButton, ControlledInput } from '../../../components'
+import { theme } from '../../../constants'
+import { loginSchema } from '../../../validations/loginSchema'
+import { useNavigation } from '@react-navigation/native'
+import { useAuth } from '../../../context/authProvider/useAuth'
 
-type loginData = {
-  email: string;
-  password: string;
-};
+interface loginData {
+  email: string
+  password: string
+}
 
 export const Login: React.FC = () => {
-  const { authenticate } = useAuth();
-  const navigation = useNavigation();
-  const [isLoading, setIsLoading] = useState(true);
+  const { authenticate } = useAuth()
+  const navigation = useNavigation()
 
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<loginData>({
     defaultValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: ''
     },
-    resolver: yupResolver(loginSchema),
-  });
+    resolver: yupResolver(loginSchema)
+  })
 
   async function handleUserLogin({ email, password }: loginData) {
     try {
-      await authenticate(email, password);
-      navigation.navigate("Home");
+      await authenticate(email, password)
+      navigation.navigate('Home')
     } catch (error) {
-      console.log(error);
-      //mostrar erros com toastify ?
+      // console.log(error)
+      // mostrar erros com toastify ?
     }
   }
 
@@ -72,7 +71,7 @@ export const Login: React.FC = () => {
             type="contained"
             color={theme.COLORS.secondary_500}
             title="Entrar"
-            onPress={handleSubmit(handleUserLogin)}
+            onPress={() => handleSubmit(handleUserLogin)}
             style={{ marginBottom: 16 }}
           />
           <MainButton
@@ -80,11 +79,11 @@ export const Login: React.FC = () => {
             color={theme.COLORS.primary_500}
             title="Cadastrar"
             onPress={() => {
-              navigation.navigate("Register");
+              navigation.navigate('Register')
             }}
           />
         </ButtonsArea>
       </Container>
     </SafeAreaView>
-  );
-};
+  )
+}

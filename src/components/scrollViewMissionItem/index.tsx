@@ -1,8 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { Container, Content, CustomImage, CustomText } from "./styles";
-import { IMAGES } from "../../assets";
-import { theme } from "../../constants";
+import React from 'react'
+import { Container, Content, CustomImage, CustomText } from './styles'
+import { IMAGES } from '../../assets'
+import { theme } from '../../constants'
 
 export const ScrollViewMissionItem = () => {
   return (
@@ -22,5 +21,5 @@ export const ScrollViewMissionItem = () => {
         </CustomText>
       </Content>
     </Container>
-  );
-};
+  )
+}

@@ -1,10 +1,10 @@
-import styled, { css } from "styled-components/native";
-import { TouchableOpacityProps } from "react-native";
+import styled, { css } from 'styled-components/native'
+import { TouchableOpacityProps } from 'react-native'
 
 export interface MainButtonProps extends TouchableOpacityProps {
-  title: string;
-  type?: "outlined" | "contained";
-  color: string;
+  title: string
+  type?: 'outlined' | 'contained'
+  color: string
 }
 
 export const TouchableOpacityButton = styled.TouchableOpacity<MainButtonProps>`
@@ -16,17 +16,17 @@ export const TouchableOpacityButton = styled.TouchableOpacity<MainButtonProps>`
   background: ${({ color }) => color};
 
   ${({ type, color }) =>
-    type === "outlined" &&
+    type === 'outlined' &&
     css`
       background: transparent;
       border: 1px;
       border-color: ${color};
     `};
-`;
+`
 
 export const TouchableOpacityButtonTitle = styled.Text<MainButtonProps>`
   font-family: ${({ theme }) => theme.FONTS.intermedium};
   font-size: ${({ theme }) => theme.SIZES.font_14px};
   color: ${({ theme, type, color }) =>
-    type === "outlined" ? color : theme.COLORS.white};
-`;
+    type === 'outlined' ? color : theme.COLORS.white};
+`
