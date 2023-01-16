@@ -14,7 +14,10 @@ import { useForm } from 'react-hook-form'
 import { profileSchema } from '../../../validations/profileSchema'
 import { ICONS, IMAGES } from '../../../assets'
 import { Masks } from 'react-native-mask-input'
-import { ControlledInput, MainButton } from 'components'
+import { ControlledInput, MainButton } from '../../../components'
+
+
+
 
 interface ProfileData {
   name: string
