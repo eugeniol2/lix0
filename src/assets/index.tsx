@@ -14,5 +14,6 @@ export const ICONS = {
   BirthDay: require('../assets/icons/detailsBirthDay.png'),
   email: require('../assets/icons/carbon_email.png'),
   detailsPerson: require('../assets/icons/detailsPerson.png'),
-  home: require('../assets//icons/homeicon.png')
+  home: require('../assets//icons/homeicon.png'),
+  navBack: require('../assets/icons/navBack.png')
 }

@@ -14,7 +14,9 @@ import { useForm } from 'react-hook-form'
 import { profileSchema } from '../../../validations/profileSchema'
 import { ICONS, IMAGES } from '../../../assets'
 import { Masks } from 'react-native-mask-input'
-import { ControlledInput, MainButton } from '../../../components'
+import { ControlledInput, MainButton, MainHeader } from '../../../components'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
 
 
 
@@ -41,20 +43,16 @@ export const Profile = () => {
     resolver: yupResolver(profileSchema)
   })
 
-  // function isDateInTheFuture({ inputDate }: { inputDate: Date }) {
-  //   const inputDateData = moment(inputDate, "DD-MM-YYYY").format("DD/MM/YYYY");
-  //   const isFuture = inputDateData.isBefore(moment().format("DD/MM/YYYY"));
-  //   return isFuture;
-  // }
 
   function HandleSaveProfileData(data: ProfileData) {
     // console.log(data)
   }
 
-  // function normalizeBirthDayData(value: string) {
-  //   console.log(value)
-  // }
   return (
+    <>
+    <SafeAreaView>
+        <MainHeader text='Perfil' />
+    </SafeAreaView>
     <SafeAreaViewContainer>
       <HeaderContainer>
         <CustomImageProfile source={IMAGES.notRealPersonImage} />
@@ -66,14 +64,16 @@ export const Profile = () => {
         >
           Trocar foto
         </Text>
-      </HeaderContainer>
-      <MainButton
+        <MainButton
+        style={{marginTop: 24}}
         color={theme.COLORS.secondary_500}
         title="DETALHES"
         onPress={() => {
           // console.log('profile Detalhes')
         }}
       />
+      </HeaderContainer>
+      
       <ProfileFormContainer>
         <ControlledInput
           control={control}
@@ -144,5 +144,6 @@ export const Profile = () => {
         </Text>
       </ProfileFooter>
     </SafeAreaViewContainer>
+    </>
   )
 }

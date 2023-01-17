@@ -8,7 +8,8 @@ export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 16px;
+  padding: 0 16px 0 16px;
+  
 `
 
 export const CustomImageProfile = styled(CustomImage)`
@@ -18,7 +19,6 @@ export const CustomImageProfile = styled(CustomImage)`
 `
 
 export const HeaderContainer = styled.View`
-  flex: 0.9;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,6 @@ export const HeaderContainer = styled.View`
 
 export const ProfileFormContainer = styled.View`
   margin: 24px 0 24px 0;
-  flex: 0.75;
   width: 100%;
 `
 
