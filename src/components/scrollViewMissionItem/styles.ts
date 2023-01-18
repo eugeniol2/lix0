@@ -10,7 +10,6 @@ export const Container = styled.TouchableOpacity`
   width: 100%;
   background: ${({ theme }) => theme.COLORS.gray_100};
   border-radius: 8px;
-
 `
 
 export const CustomImage = styled(Image)`
@@ -22,8 +21,8 @@ export const CustomImage = styled(Image)`
 
 export const Content = styled.View`
   flex: 1;
-
 `
+
 export const CustomText = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.intermedium};
 `

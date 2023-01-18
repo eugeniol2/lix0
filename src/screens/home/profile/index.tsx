@@ -20,7 +20,6 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 
-
 interface ProfileData {
   name: string
   email: string

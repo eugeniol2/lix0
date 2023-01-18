@@ -8,8 +8,8 @@ export const SafeAreaViewContainer = styled(CustomSafeAreaView)`
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 0 16px 0 16px;
-  
+  padding: 0 16px 0 16px; 
+
 `
 
 export const CustomImageProfile = styled(CustomImage)`
