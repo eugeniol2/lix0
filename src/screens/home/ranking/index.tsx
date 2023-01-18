@@ -2,6 +2,7 @@ import React from 'react'
 import { SafeAreaViewContainer } from './styles'
 import { MainHeader, ScrollViewMissionItem } from '../../../components'
 
+
 export const Ranking = () => {
   return (
     <SafeAreaViewContainer>

@@ -6,6 +6,7 @@ import { View } from 'react-native'
 import { string } from 'yup/lib/locale'
 
 
+
 interface ScrollViewMissionItemProps  {
   logradouro: string;
   uf: string;
@@ -37,5 +38,6 @@ export const ScrollViewMissionItem:React.FC<ScrollViewMissionItemProps> = (
         </CustomText>
       </Content>
     </Container>    
+
   )
 }
