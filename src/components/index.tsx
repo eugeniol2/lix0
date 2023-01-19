@@ -6,6 +6,8 @@ import { HomeNavigationBoxButton } from './homeNavigationBoxButton'
 import { IconButton } from './iconButton'
 import { ScrollViewMissionItem } from './scrollViewMissionItem'
 
+import { MainHeader } from './mainHeader'
+
 export {
   MainButton,
   MainInput,
@@ -13,5 +15,6 @@ export {
   HomeDashBoard,
   HomeNavigationBoxButton,
   IconButton,
-  ScrollViewMissionItem
+  ScrollViewMissionItem,
+  MainHeader
 }
