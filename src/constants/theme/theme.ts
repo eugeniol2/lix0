@@ -43,6 +43,10 @@ export default {
     intermedium: 'InterMedium',
     interregular: 'InterRegular',
     interlight: 'InterLight',
-    montserrato: 'Montserrat'
+    montserratBold: 'MontserratBold',
+    montserratSemiBold: 'MontserratSemiBold',
+    montserratMedium: 'MontserratMedium',
+    montserratRegular: 'MontserratRegular',
+    montserratLight: 'MontserratLight'
   }
 }
