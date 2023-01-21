@@ -34,7 +34,7 @@ export const DashBoardContainer = styled.View`
 `
 
 export const CustomText = styled.Text`
-  font-family: ${({ theme }) => theme.FONTS.montserrato};
+  font-family: ${({ theme }) => theme.FONTS.montserratBold};
   font-size: ${({ theme }) => theme.SIZES.font_14px};
   font-weight: 700;
   color: white;
@@ -53,7 +53,7 @@ export const ScoreCircle = styled.View`
 `
 
 export const ScoreCircleText = styled.Text`
-  font-family: ${({ theme }) => theme.FONTS.montserrato};
+  font-family: ${({ theme }) => theme.FONTS.montserratBold};
   font-size: ${({ theme }) => theme.SIZES.font_14px};
   font-weight: 700;
 `
