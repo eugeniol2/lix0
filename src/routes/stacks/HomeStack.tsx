@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { ROUTE } from '../../constants'
-import { Home, Ranking } from '../../screens'
+import { Home, Ranking, ChooseMission } from '../../screens'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -12,6 +12,7 @@ export const HomeStack: React.FC = () => {
       <Navigator screenOptions={{ headerShown: false }}>
         <Screen name={ROUTE.HOME} component={Home} />
         <Screen name={ROUTE.RANKING} component={Ranking} />
+        <Screen name={ROUTE.CHOOSEMISSION} component={ChooseMission} />
       </Navigator>
     </>
   )

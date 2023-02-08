@@ -7,7 +7,7 @@ export declare global {
       Home: undefined
       Ranking: undefined
       Cupons: undefined
-      Missões: undefined
+      BuscarMissões: undefined
       Coleta: undefined
       Quiz: undefined
     }

@@ -55,6 +55,7 @@ export const Home: React.FC = () => {
                 navigation.navigate('Ranking')
               }}
               missionsButton={() => {
+                navigation.navigate('BuscarMissões')
                 // console.log('right button pressed')
               }}
             />

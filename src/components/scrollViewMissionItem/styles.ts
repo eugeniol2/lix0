@@ -1,5 +1,8 @@
 import styled from 'styled-components/native'
-import { Image } from 'react-native'
+
+interface CircleProps {
+  type: 'Descarte' | 'Tratamento' | 'Quiz'
+}
 
 export const Container = styled.TouchableOpacity`
   flex-direction: row;
@@ -12,11 +15,22 @@ export const Container = styled.TouchableOpacity`
   border-radius: 8px;
 `
 
-export const CustomImage = styled(Image)`
+export const Circle = styled.View<CircleProps>`
   width: 64px;
   height: 64px;
+  justify-content: center;
+  align-items: center;
   border-radius: 32px;
   margin-right: 8px;
+  background-color: ${({ theme, type }) =>
+    type === 'Tratamento'
+      ? '#35A640'
+      : type === 'Quiz'
+      ? '#B83FCC'
+      : '#5079E1'};
+`
+export const CircleContainer = styled.View`
+  position: relative;
 `
 
 export const Content = styled.View`

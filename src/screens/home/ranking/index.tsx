@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { MainHeader } from '../../../components'
+import { MainHeader, RankingScrollViewItem } from '../../../components'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { RankingScrollViewItem } from '../../../components/rankingScrollViewItem'
 import { ScrollView } from 'react-native'
 import { TopTabNavigation } from '../../../components/topTabNavigation'
 

@@ -8,7 +8,7 @@ export const ROUTE = {
   PROFILE: 'Profile',
   RANKING: 'Ranking',
   COUPONS: 'Cupons',
-  MISSIONS: 'Missões',
+  CHOOSEMISSION: 'BuscarMissões',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 
