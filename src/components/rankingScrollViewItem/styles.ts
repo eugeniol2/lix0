@@ -9,6 +9,7 @@ export const Container = styled.TouchableOpacity`
   border-radius: 8px;
   border-bottom-width: 1px;
   border-bottom-color: ${({ theme }) => theme.COLORS.gray_200};
+
 `
 
 export const CustomImage = styled.View`

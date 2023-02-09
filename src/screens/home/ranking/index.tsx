@@ -1,8 +1,10 @@
+
 import React, { useState } from 'react'
 import { MainHeader, RankingScrollViewItem } from '../../../components'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
 import { TopTabNavigation } from '../../../components/topTabNavigation'
+
 
 export const Ranking = () => {
   const [isActive, setIsActive] = useState(false)
@@ -119,6 +121,7 @@ export const Ranking = () => {
             />
           </>
         )}
+
       </ScrollView>
     </>
   )
