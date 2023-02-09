@@ -1,18 +1,18 @@
 import styled from 'styled-components/native'
 
 interface CircleProps {
-  type: 'Descarte' | 'Tratamento' | 'Quiz'
+  type: 'Descarte' | 'Tratamento' | 'Quiz' | string
 }
 
 export const Container = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
-
-  padding: 8px;
-  margin-bottom: 16px;
   width: 100%;
-  background: ${({ theme }) => theme.COLORS.gray_100};
+  padding: 8px;
+  background: transparent;
   border-radius: 8px;
+  border-bottom-width: 1px;
+  border-bottom-color: ${({ theme }) => theme.COLORS.gray_200};
 `
 
 export const Circle = styled.View<CircleProps>`

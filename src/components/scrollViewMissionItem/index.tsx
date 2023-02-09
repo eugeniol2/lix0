@@ -10,7 +10,7 @@ interface ScrollViewMissionItemProps {
   cep: string
   horario: string
   titulo: string
-  tipo: 'Descarte' | 'Tratamento' | 'Quiz'
+  tipo: 'Descarte' | 'Tratamento' | 'Quiz' | string
 }
 
 export const ScrollViewMissionItem: React.FC<ScrollViewMissionItemProps> = ({
