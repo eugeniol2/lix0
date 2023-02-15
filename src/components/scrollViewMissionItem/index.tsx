@@ -1,9 +1,9 @@
 import React from 'react'
 import { Circle, Container, Content, CustomText } from './styles'
 import { theme } from '../../constants'
-import { Text } from 'react-native'
+import { Text, TouchableOpacityProps } from 'react-native'
 
-interface ScrollViewMissionItemProps {
+interface ScrollViewMissionItemProps extends TouchableOpacityProps {
   logradouro: string
   uf: string
   localidade: string
@@ -20,10 +20,11 @@ export const ScrollViewMissionItem: React.FC<ScrollViewMissionItemProps> = ({
   cep,
   horario,
   titulo,
-  tipo
+  tipo,
+  ...rest
 }) => {
   return (
-    <Container>
+    <Container {...rest}>
       <Circle type={tipo}>
         <Text style={{ fontSize: 32, color: 'white', fontWeight: '300' }}>
           {tipo[0]}

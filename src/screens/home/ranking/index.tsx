@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
 import { TopTabNavigation } from '../../../components/topTabNavigation'
 
-export const Ranking = () => {
+export const Ranking: React.FC = () => {
   const [isActive, setIsActive] = useState(false)
 
   const handleLeftButtonClick = () => {

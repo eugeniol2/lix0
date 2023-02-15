@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import { MainHeader, ScrollViewMissionItem } from '../../../components'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
-import { data } from '../../../services/mock'
+import { data, missionDataProps } from '../../../services/mock'
 import { TopFilterTab } from './topFilterTab'
+import { useNavigation } from '@react-navigation/native'
 
 export const ChooseMission: React.FC = () => {
-  const [missionData, setMissionData] = useState(data)
+  const [missionData, setMissionData] = useState<missionDataProps[]>(data)
+  const navigation = useNavigation()
 
   return (
     <>
@@ -15,17 +17,20 @@ export const ChooseMission: React.FC = () => {
       </SafeAreaView>
       <TopFilterTab setFilteredData={setMissionData} data={data} />
       <ScrollView style={{ padding: 8 }}>
-        {missionData.map(item => {
+        {missionData.map(mission => {
           return (
             <ScrollViewMissionItem
-              titulo={item.titulo}
-              cep={item.cep}
-              localidade={item.localidade}
-              logradouro={item.logradouro}
-              uf={item.uf}
-              horario={item.horario}
-              tipo={item.tipo}
-              key={item.cep} // change to id
+              titulo={mission.titulo}
+              cep={mission.cep}
+              localidade={mission.localidade}
+              logradouro={mission.logradouro}
+              uf={mission.uf}
+              horario={mission.horario}
+              tipo={mission.tipo}
+              key={mission.cep} // change to id
+              onPress={() => {
+                navigation.navigate('MissionDetails', { mission })
+              }}
             />
           )
         })}

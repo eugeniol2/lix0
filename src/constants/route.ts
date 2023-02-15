@@ -9,6 +9,7 @@ export const ROUTE = {
   RANKING: 'Ranking',
   COUPONS: 'Cupons',
   CHOOSEMISSION: 'BuscarMissões',
+  MISSIONDETAILS: 'MissionDetails',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 
