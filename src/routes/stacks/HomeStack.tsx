@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { ROUTE } from '../../constants'
-import { Home, Ranking, ChooseMission } from '../../screens'
+import { Home, Ranking, ChooseMission, MyMissions } from '../../screens'
 import { missionDataProps } from '../../services/mock'
 import { MissionDetails } from '../../screens/home/chooseMission/missionDetails'
 
@@ -25,6 +25,7 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.RANKING} component={Ranking} />
         <Screen name={ROUTE.CHOOSEMISSION} component={ChooseMission} />
         <Screen name={ROUTE.MISSIONDETAILS} component={MissionDetails} />
+        <Screen name={ROUTE.MYMISSIONS} component={MyMissions} />
       </Navigator>
     </>
   )

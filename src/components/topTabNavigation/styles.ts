@@ -26,3 +26,14 @@ export const CustomButton = styled.TouchableOpacity<CustomButtonProps>`
       border-top-left-radius: 8px;
     `};
 `
+
+export const CustomText = styled.Text<CustomButtonProps>`
+  font-family: ${({ theme }) => theme.FONTS.montserratRegular};
+  font-size: 24px;
+  color: ${({ theme }) => theme.COLORS.white};
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      color: ${({ theme }) => theme.COLORS.gray_900};
+    `};
+`

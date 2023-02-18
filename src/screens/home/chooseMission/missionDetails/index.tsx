@@ -10,19 +10,17 @@ import {
   RegularText
 } from './styles'
 import { theme } from '../../../../constants'
-import { HomeStackParams } from '../../../../routes/stacks/HomeStack'
-import { NavigationScreenComponent } from 'react-navigation'
-import { missionDataProps } from '../../../../services/mock'
+import { useAtom } from 'jotai/react'
+import {
+  addNewMissionAtom,
+  singleMissionAtom
+} from '../../../../atoms/missionAtom'
+import { useNavigation } from '@react-navigation/native'
 
-interface MissionDetailsProps {
-  mission: missionDataProps
-}
-
-export const MissionDetails: NavigationScreenComponent<
-  HomeStackParams,
-  MissionDetailsProps
-> = ({ route }) => {
-  const mission: missionDataProps = route.params?.mission
+export const MissionDetails: React.FC = () => {
+  const navigation = useNavigation()
+  const [mission] = useAtom(singleMissionAtom)
+  const [, setNewMission] = useAtom(addNewMissionAtom)
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -64,7 +62,10 @@ export const MissionDetails: NavigationScreenComponent<
               type="contained"
               title="Aceitar missão"
               color={theme.COLORS.secondary_500}
-              onPress={() => {}}
+              onPress={() => {
+                setNewMission(mission)
+                navigation.navigate('MyMissions')
+              }}
             />
             <MainButton
               type="outlined"

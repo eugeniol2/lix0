@@ -5,6 +5,7 @@ import { Home } from './home'
 import { Profile } from './home/profile'
 import { Ranking } from './home/ranking'
 import { ChooseMission } from './home/chooseMission'
+import { MyMissions } from './home/myMissions'
 
 export {
   Login,
@@ -13,5 +14,6 @@ export {
   Home,
   Profile,
   Ranking,
-  ChooseMission
+  ChooseMission,
+  MyMissions
 }

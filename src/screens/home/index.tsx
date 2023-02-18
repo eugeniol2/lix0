@@ -62,9 +62,9 @@ export const Home: React.FC = () => {
           </HomeDashBoardContainer>
           <NavigationButtonsContainer>
             <HomeNavigationBoxButton
-              title="Missões"
+              title="Minhas Missões"
               onPress={() => {
-                // console.log('missões')
+                navigation.navigate('MyMissions')
               }}
               iconName={ICONS.StarSparkle}
             />
