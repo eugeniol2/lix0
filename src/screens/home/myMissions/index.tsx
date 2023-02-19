@@ -4,12 +4,14 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
 import { TopTabNavigation } from '../../../components/topTabNavigation'
 import { useAtom } from 'jotai/react'
-import { myMissionsAtom } from '../../../atoms/missionAtom'
+import { myMissionsAtom, singleMissionAtom } from '../../../atoms/missionAtom'
+import { useNavigation } from '@react-navigation/native'
 
 export const MyMissions: React.FC = () => {
-  // const [missionData, setMissionData] = useState<missionDataProps[]>(data)
+  const navigation = useNavigation()
   const [isActive, setIsActive] = useState(false)
   const [isInProgress, setIsInProgress] = useState(false)
+  const [, setMission] = useAtom(singleMissionAtom)
   const [myMissions] = useAtom(myMissionsAtom)
 
   const handleLeftButtonClick = () => {
@@ -49,9 +51,10 @@ export const MyMissions: React.FC = () => {
                     uf={mission.uf}
                     horario={mission.horario}
                     tipo={mission.tipo}
-                    key={mission.cep} // change to id
+                    key={mission.id}
                     onPress={() => {
-                      console.log(isActive)
+                      setMission(mission)
+                      navigation.navigate('MyMissionDetails')
                     }}
                   />
                 )

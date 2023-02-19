@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { MainHeader, ScrollViewMissionItem } from '../../../components'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView } from 'react-native'
@@ -6,25 +6,13 @@ import { data, missionDataProps } from '../../../services/mock'
 import { TopFilterTab } from './topFilterTab'
 import { useNavigation } from '@react-navigation/native'
 import { useAtom } from 'jotai'
-import { myMissionsAtom, singleMissionAtom } from '../../../atoms/missionAtom'
+import { singleMissionAtom } from '../../../atoms/missionAtom'
 
 export const ChooseMission: React.FC = () => {
   const navigation = useNavigation()
   const [sourceData, setSourceData] = useState<missionDataProps[]>(data)
-  const [filteredArray, setFilteredArray] = useState<missionDataProps[]>()
-  const [myMissions] = useAtom(myMissionsAtom)
   const [, setMission] = useAtom(singleMissionAtom)
   const [activeFilterButton, setActiveFilterButton] = useState('Todos')
-
-  const isAlreadyAdded = () => {
-    const filteredArray = sourceData.filter(
-      (item, index) => item.id !== myMissions[index]?.id
-    )
-    return filteredArray
-  }
-  useEffect(() => {
-    setFilteredArray(isAlreadyAdded)
-  }, [])
 
   return (
     <>
@@ -39,7 +27,7 @@ export const ChooseMission: React.FC = () => {
       />
       <ScrollView style={{ padding: 8 }}>
         {activeFilterButton !== 'Todos'
-          ? filteredArray
+          ? sourceData
               ?.filter(filterItem => filterItem.tipo === activeFilterButton)
               .map(item => {
                 return (
@@ -59,7 +47,7 @@ export const ChooseMission: React.FC = () => {
                   />
                 )
               })
-          : filteredArray?.map(item => {
+          : sourceData?.map(item => {
               return (
                 <ScrollViewMissionItem
                   titulo={item.titulo}

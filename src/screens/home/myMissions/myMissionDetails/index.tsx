@@ -1,6 +1,15 @@
 import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import { MainButton, MainHeader } from '../../../../components'
+import { theme } from '../../../../constants'
+import { useAtom } from 'jotai/react'
+import { Alert } from 'react-native'
+import {
+  addNewMissionAtom,
+  removeMissionAtom,
+  singleMissionAtom
+} from '../../../../atoms/missionAtom'
+import { useNavigation } from '@react-navigation/native'
 import {
   Body,
   BoldText,
@@ -9,18 +18,29 @@ import {
   Header,
   RegularText
 } from './styles'
-import { theme } from '../../../../constants'
-import { useAtom } from 'jotai/react'
-import {
-  addNewMissionAtom,
-  singleMissionAtom
-} from '../../../../atoms/missionAtom'
-import { useNavigation } from '@react-navigation/native'
 
-export const MissionDetails: React.FC = () => {
+export const MyMissionDetails: React.FC = () => {
   const navigation = useNavigation()
   const [mission] = useAtom(singleMissionAtom)
   const [, setNewMission] = useAtom(addNewMissionAtom)
+  const [, setRemoveMission] = useAtom(removeMissionAtom)
+
+  const confirmAbandonMission = () => {
+    Alert.alert('Confirmação', 'Realmente deseja abandonar essa missão?', [
+      {
+        text: 'Sim',
+        onPress: () => {
+          setRemoveMission(mission.id)
+          navigation.goBack()
+        }
+      },
+      {
+        text: 'Não',
+        onPress: () => {}
+      }
+    ])
+  }
+
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
@@ -60,8 +80,8 @@ export const MissionDetails: React.FC = () => {
             <MainButton
               style={{ marginBottom: 12 }}
               type="contained"
-              title="Aceitar missão"
-              color={theme.COLORS.secondary_500}
+              title="Comprovar missão"
+              color={theme.COLORS.primary_500}
               onPress={() => {
                 setNewMission(mission)
                 navigation.navigate('MyMissions')
@@ -69,8 +89,9 @@ export const MissionDetails: React.FC = () => {
             />
             <MainButton
               type="outlined"
-              title="Recusar missão"
+              title="Abandonar missão"
               color={theme.COLORS.auxiliary_red}
+              onPress={confirmAbandonMission}
             />
           </Footer>
         </Container>
