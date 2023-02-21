@@ -5,7 +5,6 @@ import { theme } from '../../../../constants'
 import { useAtom } from 'jotai/react'
 import { Alert } from 'react-native'
 import {
-  addNewMissionAtom,
   removeMissionAtom,
   singleMissionAtom
 } from '../../../../atoms/missionAtom'
@@ -22,9 +21,7 @@ import {
 export const MyMissionDetails: React.FC = () => {
   const navigation = useNavigation()
   const [mission] = useAtom(singleMissionAtom)
-  const [, setNewMission] = useAtom(addNewMissionAtom)
   const [, setRemoveMission] = useAtom(removeMissionAtom)
-
   const confirmAbandonMission = () => {
     Alert.alert('Confirmação', 'Realmente deseja abandonar essa missão?', [
       {
@@ -83,8 +80,7 @@ export const MyMissionDetails: React.FC = () => {
               title="Comprovar missão"
               color={theme.COLORS.primary_500}
               onPress={() => {
-                setNewMission(mission)
-                navigation.navigate('MyMissions')
+                navigation.navigate('ProvePhotoOrVideo')
               }}
             />
             <MainButton

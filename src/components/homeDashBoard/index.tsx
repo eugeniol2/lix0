@@ -1,6 +1,7 @@
 import React from 'react'
 import TrophyIcon from 'react-native-vector-icons/EvilIcons'
 import PaperIcon from 'react-native-vector-icons/Ionicons'
+
 import { Image } from 'react-native'
 import { ICONS } from '../../assets'
 import {

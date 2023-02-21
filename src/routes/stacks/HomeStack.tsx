@@ -6,9 +6,11 @@ import {
   Ranking,
   ChooseMission,
   MyMissions,
-  MyMissionDetails
+  MyMissionDetails,
+  ProvePhotoOrVideo,
+  ProveCameraScreen,
+  MissionDetails
 } from '../../screens'
-import { MissionDetails } from '../../screens/home/chooseMission/missionDetails'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -23,6 +25,8 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.MISSIONDETAILS} component={MissionDetails} />
         <Screen name={ROUTE.MYMISSIONS} component={MyMissions} />
         <Screen name={ROUTE.MYMISSIONDETAILS} component={MyMissionDetails} />
+        <Screen name={ROUTE.PROVEPHOTOORVIDEO} component={ProvePhotoOrVideo} />
+        <Screen name={ROUTE.PROVECAMERASCREEN} component={ProveCameraScreen} />
       </Navigator>
     </>
   )

@@ -12,6 +12,8 @@ export const ROUTE = {
   MISSIONDETAILS: 'MissionDetails',
   MYMISSIONDETAILS: 'MyMissionDetails',
   MYMISSIONS: 'MyMissions',
+  PROVEPHOTOORVIDEO: 'ProvePhotoOrVideo',
+  PROVECAMERASCREEN: 'ProveCameraScreen',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 

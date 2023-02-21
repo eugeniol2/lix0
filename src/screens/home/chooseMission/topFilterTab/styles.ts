@@ -12,9 +12,10 @@ export const Container = styled.View`
 
 export const Content = styled.View`
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 48px;
+  margin-top: 8px;
 `
 
 export const OptionItem = styled.TouchableOpacity<OptionItemProps>`

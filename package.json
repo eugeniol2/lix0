@@ -21,6 +21,8 @@
     "@types/react-navigation": "^3.4.0",
     "axios": "^1.2.2",
     "expo": "~47.0.9",
+    "expo-camera": "^13.1.0",
+    "expo-media-library": "^15.0.0",
     "expo-status-bar": "~1.4.2",
     "jotai": "^2.0.1",
     "moment": "^2.29.4",
