@@ -9,7 +9,8 @@ import {
   MyMissionDetails,
   ProvePhotoOrVideo,
   ProveCameraScreen,
-  MissionDetails
+  MissionDetails,
+  CouponStore
 } from '../../screens'
 
 const { Navigator, Screen } = createStackNavigator()
@@ -27,6 +28,7 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.MYMISSIONDETAILS} component={MyMissionDetails} />
         <Screen name={ROUTE.PROVEPHOTOORVIDEO} component={ProvePhotoOrVideo} />
         <Screen name={ROUTE.PROVECAMERASCREEN} component={ProveCameraScreen} />
+        <Screen name={ROUTE.COUPONSTORE} component={CouponStore} />
       </Navigator>
     </>
   )

@@ -51,12 +51,10 @@ export const Home: React.FC = () => {
             <HomeDashBoard
               userPointsValue="1200"
               rankingButton={() => {
-                // console.log('left button pressed')
                 navigation.navigate('Ranking')
               }}
               missionsButton={() => {
                 navigation.navigate('BuscarMissões')
-                // console.log('right button pressed')
               }}
             />
           </HomeDashBoardContainer>
@@ -70,16 +68,14 @@ export const Home: React.FC = () => {
             />
             <HomeNavigationBoxButton
               title="Coleta"
-              onPress={() => {
-                // console.log('Coleta')
-              }}
+              onPress={() => {}}
               iconName={ICONS.SearchHomeIcon}
             />
             <HomeNavigationBoxButton
               title="Cupons"
               iconName={ICONS.Coupon}
               onPress={() => {
-                // console.log('Cupons')
+                navigation.navigate('CouponStore')
               }}
             />
 

@@ -7,6 +7,7 @@ import { IconButton } from './iconButton'
 import { ScrollViewMissionItem } from './scrollViewMissionItem'
 import { RankingScrollViewItem } from './rankingScrollViewItem'
 import { MainHeader } from './mainHeader'
+import { StoreScrollViewItem } from './storeScrollViewItem'
 
 export {
   MainButton,
@@ -17,5 +18,6 @@ export {
   IconButton,
   ScrollViewMissionItem,
   MainHeader,
-  RankingScrollViewItem
+  RankingScrollViewItem,
+  StoreScrollViewItem
 }

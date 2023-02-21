@@ -10,6 +10,7 @@ import { MyMissionDetails } from './home/myMissions/myMissionDetails'
 import { ProvePhotoOrVideo } from './home/myMissions/provePhotoOrVideo'
 import { ProveCameraScreen } from './home/myMissions/provePhotoOrVideo/proveCameraScreen'
 import { MissionDetails } from './home/chooseMission/missionDetails'
+import { CouponStore } from './home/couponStore'
 
 export {
   Login,
@@ -23,5 +24,6 @@ export {
   MyMissionDetails,
   MissionDetails,
   ProvePhotoOrVideo,
-  ProveCameraScreen
+  ProveCameraScreen,
+  CouponStore
 }

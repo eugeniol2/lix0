@@ -105,3 +105,59 @@ export const data = [
     }
   }
 ]
+
+export interface storeCouponsProps {
+  id: number
+  isPercentage: boolean
+  discount: number
+  usedIn: string
+  amountLeft: number
+  price: number
+  companies: string[]
+  observations: string[]
+}
+
+export const storeCoupons = [
+  {
+    id: 44444,
+    isPercentage: true,
+    discount: 20,
+    usedIn: 'Válido nos supermercados parceiros',
+    amountLeft: 20000,
+    price: 2000,
+    companies: ['ekological', 'verfruit', 'ecoaliza', 'beegreen'],
+    observations: [
+      'Após a aplicação o cupom não estará mais disponível.',
+      'Só é permitido aplicar este cupom em um unico parceiro.',
+      'Os cupoms não tem data de expiração.'
+    ]
+  },
+  {
+    id: 33333,
+    isPercentage: false,
+    discount: 40,
+    usedIn: 'Válido nos supermercados parceiros',
+    amountLeft: 2210,
+    price: 600,
+    companies: ['ekological', 'verfruit', 'ecoaliza', 'beegreen'],
+    observations: [
+      'Após a aplicação o cupom não estará mais disponível.',
+      'Só é permitido aplicar este cupom em um unico parceiro.',
+      'Os cupoms não tem data de expiração.'
+    ]
+  },
+  {
+    id: 1111,
+    isPercentage: true,
+    discount: 20,
+    usedIn: 'Válido nos supermercados parceiros',
+    amountLeft: 10,
+    price: 3021,
+    companies: ['ekological', 'verfruit', 'ecoaliza', 'beegreen'],
+    observations: [
+      'Após a aplicação o cupom não estará mais disponível.',
+      'Só é permitido aplicar este cupom em um unico parceiro.',
+      'Os cupoms não tem data de expiração.'
+    ]
+  }
+]

@@ -12,6 +12,9 @@ export declare global {
       BuscarMissões: undefined
       MyMissions: undefined
       MissionDetails: undefined
+      ProvePhotoOrVideo: undefined
+      ProveCameraScreen: undefined
+      CouponStore: undefined
       Coleta: undefined
       Quiz: undefined
     }
