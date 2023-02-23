@@ -4,5 +4,18 @@ import { ForgotPassword } from './auth/forgotPassword'
 import { Home } from './home'
 import { Profile } from './home/profile'
 import { Ranking } from './home/ranking'
+import { ChooseMission } from './home/chooseMission'
+import { MyMissions } from './home/myMissions'
+import { MyMissionDetails } from './home/myMissions/myMissionDetails'
 
-export { Login, Register, ForgotPassword, Home, Profile, Ranking }
+export {
+  Login,
+  Register,
+  ForgotPassword,
+  Home,
+  Profile,
+  Ranking,
+  ChooseMission,
+  MyMissions,
+  MyMissionDetails
+}

@@ -3,14 +3,12 @@ import styled from 'styled-components/native'
 export const Container = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
-
   padding: 8px;
   margin-top: 12px;
   width: 100%;
-  /* background: ${({ theme }) => theme.COLORS.gray_100}; */
   border-radius: 8px;
   border-bottom-width: 1px;
-  border-bottom-color: ${({ theme }) => theme.COLORS.secondary_500};
+  border-bottom-color: ${({ theme }) => theme.COLORS.gray_200};
 `
 
 export const CustomImage = styled.View`

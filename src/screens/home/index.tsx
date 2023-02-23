@@ -55,15 +55,16 @@ export const Home: React.FC = () => {
                 navigation.navigate('Ranking')
               }}
               missionsButton={() => {
+                navigation.navigate('BuscarMissões')
                 // console.log('right button pressed')
               }}
             />
           </HomeDashBoardContainer>
           <NavigationButtonsContainer>
             <HomeNavigationBoxButton
-              title="Missões"
+              title="Minhas Missões"
               onPress={() => {
-                // console.log('missões')
+                navigation.navigate('MyMissions')
               }}
               iconName={ICONS.StarSparkle}
             />
