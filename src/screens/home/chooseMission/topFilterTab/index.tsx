@@ -11,8 +11,6 @@ interface topFilterTabProps {
 }
 
 export const TopFilterTab: React.FC<topFilterTabProps> = ({
-  data,
-  setFilteredData,
   setActiveButton,
   activeButton
 }) => {
