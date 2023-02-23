@@ -10,6 +10,12 @@ export const ROUTE = {
   COUPONS: 'Cupons',
   CHOOSEMISSION: 'BuscarMissões',
   MISSIONDETAILS: 'MissionDetails',
+  MYMISSIONDETAILS: 'MyMissionDetails',
+  MYMISSIONS: 'MyMissions',
+  PROVEPHOTOORVIDEO: 'ProvePhotoOrVideo',
+  PROVECAMERASCREEN: 'ProveCameraScreen',
+  COUPONSTORE: 'CouponStore',
+  COUPONSDETAILS: 'CouponDetails',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 

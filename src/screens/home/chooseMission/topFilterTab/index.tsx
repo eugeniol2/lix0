@@ -1,28 +1,23 @@
 import { Text } from 'react-native'
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import { Container, Content, OptionItem, OptionText } from './styles'
 import { missionDataProps } from '../../../../services/mock'
 
 interface topFilterTabProps {
   data: missionDataProps[]
   setFilteredData: Dispatch<SetStateAction<missionDataProps[]>>
+  setActiveButton: Dispatch<SetStateAction<string>>
+  activeButton: string
 }
 
 export const TopFilterTab: React.FC<topFilterTabProps> = ({
-  data,
-  setFilteredData
+  setActiveButton,
+  activeButton
 }) => {
-  const [activeButton, setActiveButton] = useState('Todos')
   const buttons = ['Todos', 'Descarte', 'Tratamento', 'Quiz']
 
   const handleOptionButtonClick = (name: string) => {
     setActiveButton(name)
-    setFilteredData(data)
-    if (name === 'Todos') {
-      return
-    }
-    const missionFilter = data.filter(data => data.tipo === name)
-    setFilteredData(missionFilter)
   }
 
   return (

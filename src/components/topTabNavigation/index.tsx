@@ -1,6 +1,5 @@
-import { Text } from 'react-native'
 import React from 'react'
-import { Container, CustomButton } from './styles'
+import { Container, CustomButton, CustomText } from './styles'
 
 interface TopTabNavigationProps {
   leftButtonName: string
@@ -20,10 +19,10 @@ export const TopTabNavigation: React.FC<TopTabNavigationProps> = ({
   return (
     <Container>
       <CustomButton isActive={isActive} onPress={leftButtonClick}>
-        <Text>{leftButtonName}</Text>
+        <CustomText isActive={isActive}>{leftButtonName}</CustomText>
       </CustomButton>
       <CustomButton isActive={!isActive} onPress={rightButtonClick}>
-        <Text>{rightButtonName}</Text>
+        <CustomText isActive={!isActive}>{rightButtonName}</CustomText>
       </CustomButton>
     </Container>
   )

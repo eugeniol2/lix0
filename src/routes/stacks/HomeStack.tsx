@@ -1,20 +1,20 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { ROUTE } from '../../constants'
-import { Home, Ranking, ChooseMission } from '../../screens'
-import { missionDataProps } from '../../services/mock'
-import { MissionDetails } from '../../screens/home/chooseMission/missionDetails'
+import {
+  Home,
+  Ranking,
+  ChooseMission,
+  MyMissions,
+  MyMissionDetails,
+  ProvePhotoOrVideo,
+  ProveCameraScreen,
+  MissionDetails,
+  CouponStore,
+  CouponDetails
+} from '../../screens'
 
-export interface HomeStackParams {
-  HomePage: undefined
-  Ranking: undefined
-  BuscarMissões: undefined
-  MissionDetails: {
-    mission: missionDataProps
-  }
-  [key: string]: undefined | { mission: missionDataProps }
-}
-const { Navigator, Screen } = createStackNavigator<HomeStackParams>()
+const { Navigator, Screen } = createStackNavigator()
 
 export const HomeStack: React.FC = () => {
   // console.log(Navigator)
@@ -25,6 +25,12 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.RANKING} component={Ranking} />
         <Screen name={ROUTE.CHOOSEMISSION} component={ChooseMission} />
         <Screen name={ROUTE.MISSIONDETAILS} component={MissionDetails} />
+        <Screen name={ROUTE.MYMISSIONS} component={MyMissions} />
+        <Screen name={ROUTE.MYMISSIONDETAILS} component={MyMissionDetails} />
+        <Screen name={ROUTE.PROVEPHOTOORVIDEO} component={ProvePhotoOrVideo} />
+        <Screen name={ROUTE.PROVECAMERASCREEN} component={ProveCameraScreen} />
+        <Screen name={ROUTE.COUPONSTORE} component={CouponStore} />
+        <Screen name={ROUTE.COUPONSDETAILS} component={CouponDetails} />
       </Navigator>
     </>
   )

@@ -5,35 +5,66 @@ import { ScrollView } from 'react-native'
 import { data, missionDataProps } from '../../../services/mock'
 import { TopFilterTab } from './topFilterTab'
 import { useNavigation } from '@react-navigation/native'
+import { useAtom } from 'jotai'
+import { singleMissionAtom } from '../../../atoms/missionAtom'
 
 export const ChooseMission: React.FC = () => {
-  const [missionData, setMissionData] = useState<missionDataProps[]>(data)
   const navigation = useNavigation()
+  const [sourceData, setSourceData] = useState<missionDataProps[]>(data)
+  const [, setMission] = useAtom(singleMissionAtom)
+  const [activeFilterButton, setActiveFilterButton] = useState('Todos')
 
   return (
     <>
       <SafeAreaView>
         <MainHeader text="Buscar Missão" />
       </SafeAreaView>
-      <TopFilterTab setFilteredData={setMissionData} data={data} />
+      <TopFilterTab
+        setFilteredData={setSourceData}
+        data={data}
+        activeButton={activeFilterButton}
+        setActiveButton={setActiveFilterButton}
+      />
       <ScrollView style={{ padding: 8 }}>
-        {missionData.map(mission => {
-          return (
-            <ScrollViewMissionItem
-              titulo={mission.titulo}
-              cep={mission.cep}
-              localidade={mission.localidade}
-              logradouro={mission.logradouro}
-              uf={mission.uf}
-              horario={mission.horario}
-              tipo={mission.tipo}
-              key={mission.cep} // change to id
-              onPress={() => {
-                navigation.navigate('MissionDetails', { mission })
-              }}
-            />
-          )
-        })}
+        {activeFilterButton !== 'Todos'
+          ? sourceData
+              ?.filter(filterItem => filterItem.tipo === activeFilterButton)
+              .map(item => {
+                return (
+                  <ScrollViewMissionItem
+                    titulo={item.titulo}
+                    cep={item.cep}
+                    localidade={item.localidade}
+                    logradouro={item.logradouro}
+                    uf={item.uf}
+                    horario={item.horario}
+                    tipo={item.tipo}
+                    key={item.id} // change to id
+                    onPress={() => {
+                      setMission(item)
+                      navigation.navigate('MissionDetails')
+                    }}
+                  />
+                )
+              })
+          : sourceData?.map(item => {
+              return (
+                <ScrollViewMissionItem
+                  titulo={item.titulo}
+                  cep={item.cep}
+                  localidade={item.localidade}
+                  logradouro={item.logradouro}
+                  uf={item.uf}
+                  horario={item.horario}
+                  tipo={item.tipo}
+                  key={item.id} // change to id
+                  onPress={() => {
+                    setMission(item)
+                    navigation.navigate('MissionDetails')
+                  }}
+                />
+              )
+            })}
       </ScrollView>
     </>
   )
