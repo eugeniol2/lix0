@@ -10,8 +10,11 @@ import {
   ProvePhotoOrVideo,
   ProveCameraScreen,
   MissionDetails,
-  CouponStore
+  CouponStore,
+  CouponDetails,
+  MyCoupons
 } from '../../screens'
+import { CouponVizualization } from '../../screens/home/couponStore/couponDetails/couponVisualization'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -29,6 +32,12 @@ export const HomeStack: React.FC = () => {
         <Screen name={ROUTE.PROVEPHOTOORVIDEO} component={ProvePhotoOrVideo} />
         <Screen name={ROUTE.PROVECAMERASCREEN} component={ProveCameraScreen} />
         <Screen name={ROUTE.COUPONSTORE} component={CouponStore} />
+        <Screen name={ROUTE.COUPONSDETAILS} component={CouponDetails} />
+        <Screen
+          name={ROUTE.COUPONVIZUALIZATION}
+          component={CouponVizualization}
+        />
+        <Screen name={ROUTE.MYCOUPONS} component={MyCoupons} />
       </Navigator>
     </>
   )

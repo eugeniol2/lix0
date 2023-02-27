@@ -14,7 +14,7 @@ import {
 } from './styles'
 
 export interface HomeSquareButtonsProps {
-  userPointsValue: string
+  userPointsValue: number
   rankingButton?: () => void
   missionsButton?: () => void
 }

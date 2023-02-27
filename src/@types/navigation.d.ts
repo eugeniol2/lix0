@@ -15,6 +15,9 @@ export declare global {
       ProvePhotoOrVideo: undefined
       ProveCameraScreen: undefined
       CouponStore: undefined
+      CouponDetails: undefined
+      CouponVizualization: undefined
+      MyCoupons: undefined
       Coleta: undefined
       Quiz: undefined
     }

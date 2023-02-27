@@ -15,6 +15,9 @@ export const ROUTE = {
   PROVEPHOTOORVIDEO: 'ProvePhotoOrVideo',
   PROVECAMERASCREEN: 'ProveCameraScreen',
   COUPONSTORE: 'CouponStore',
+  COUPONSDETAILS: 'CouponDetails',
+  COUPONVIZUALIZATION: 'CouponVizualization',
+  MYCOUPONS: 'MyCoupons',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 

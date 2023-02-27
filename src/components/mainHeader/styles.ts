@@ -21,3 +21,15 @@ export const HeaderText = styled.Text`
   font-size: ${({ theme }) => theme.SIZES.extraLarge_24px};
   color: ${({ theme }) => theme.COLORS.white};
 `
+
+export const PointsBox = styled.View`
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  background: ${({ theme }) => theme.COLORS.primary_300};
+  right: 0;
+  margin-right: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px ${({ theme }) => theme.COLORS.primary_500};
+`

@@ -5,12 +5,20 @@ export default {
     primary_400: '#4CEB7D',
     primary_300: '#79F09D',
     primary_200: '#A5F5BE',
+    primary_100: '#D2FADE',
 
     secondary_600: '#472ACC',
     secondary_500: '#5935FF',
     secondary_400: '#7A5DFF',
     secondary_300: '#9B86FF',
     secondary_200: '#BDAEFF',
+
+    red_100: '#FBD9E0',
+    red_200: '#F6B2C2',
+    red_300: '#F28CA3',
+    red_400: '#ED6585',
+    red_500: '#E93F66',
+    red_600: '#BA3252',
 
     auxiliary_red: '#E93F66',
     auxiliary_yellow: '#FFC866',

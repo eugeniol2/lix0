@@ -4,16 +4,16 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
   height: 160px;
-  border: 1px solid #79f09d;
+  border: 1px solid ${({ theme }) => theme.COLORS.primary_300};
   border-radius: 4px;
   margin-bottom: 16px;
 `
-export const PhotoContainer = styled.Image`
+export const Photo = styled.Image`
   flex: 1;
   height: 100%;
   border-radius: 4px;
   margin-right: 8px;
-  background-color: #d2fade;
+  background-color: ${({ theme }) => theme.COLORS.primary_100};
 `
 
 export const DescriptionContainer = styled.View`
@@ -56,4 +56,5 @@ export const BuyButton = styled.TouchableOpacity`
 
 export const BuyButtonText = styled.Text`
   font-family: ${({ theme }) => theme.FONTS.interbold};
+  font-size: 10px;
 `

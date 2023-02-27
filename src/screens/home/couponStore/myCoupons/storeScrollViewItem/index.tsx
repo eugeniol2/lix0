@@ -1,5 +1,7 @@
-import { Image } from 'react-native'
+import { Image, TouchableOpacityProps } from 'react-native'
 import React from 'react'
+import { ICONS, IMAGES } from '../../../../../assets'
+import { theme } from '../../../../../constants'
 import {
   BuyButton,
   BuyButtonText,
@@ -8,13 +10,11 @@ import {
   DescriptionContainer,
   FooterContainer,
   InformationsContainer,
-  PhotoContainer,
+  Photo,
   PriceContainer
 } from './styles'
-import { ICONS, IMAGES } from '../../assets'
-import { theme } from '../../constants'
 
-interface StoreScrollViewItemProps {
+interface StoreScrollViewItemProps extends TouchableOpacityProps {
   isPercentage: boolean
   discount: number
   usedIn: string
@@ -29,11 +29,11 @@ export const StoreScrollViewItem: React.FC<StoreScrollViewItemProps> = ({
   usedIn,
   amountLeft,
   price,
-  onPressFunction
+  ...rest
 }) => {
   return (
     <Container>
-      <PhotoContainer source={IMAGES.logo} resizeMode="contain" />
+      <Photo source={IMAGES.logo} resizeMode="contain" />
       <DescriptionContainer>
         <InformationsContainer>
           <CustomText style={{ fontSize: 20 }}>
@@ -49,7 +49,7 @@ export const StoreScrollViewItem: React.FC<StoreScrollViewItemProps> = ({
             </CustomText>
             <Image source={ICONS.TrashBag} resizeMode="contain" />
           </PriceContainer>
-          <BuyButton onPress={() => onPressFunction}>
+          <BuyButton {...rest}>
             <BuyButtonText>EU QUERO</BuyButtonText>
           </BuyButton>
         </FooterContainer>
