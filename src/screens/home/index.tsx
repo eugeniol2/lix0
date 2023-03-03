@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
 
   useEffect(() => {
     setUserPointsAmount(userData.pointsAmount)
-  }, [])
+  })
 
   return (
     <>
