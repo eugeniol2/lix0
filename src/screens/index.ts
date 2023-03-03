@@ -13,6 +13,8 @@ import { MissionDetails } from './home/chooseMission/missionDetails'
 import { CouponStore } from './home/couponStore'
 import { CouponDetails } from './home/couponStore/couponDetails'
 import { MyCoupons } from './home/couponStore/myCoupons'
+import { Quiz } from './home/quiz'
+import { Questionary } from './home/quiz/questionary'
 
 export {
   Login,
@@ -29,5 +31,7 @@ export {
   ProveCameraScreen,
   CouponStore,
   CouponDetails,
-  MyCoupons
+  MyCoupons,
+  Quiz,
+  Questionary
 }

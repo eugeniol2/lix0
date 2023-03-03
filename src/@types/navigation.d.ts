@@ -20,6 +20,7 @@ export declare global {
       MyCoupons: undefined
       Coleta: undefined
       Quiz: undefined
+      Questionary: undefined
     }
   }
 }

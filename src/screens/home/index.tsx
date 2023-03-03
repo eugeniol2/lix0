@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
 
   useEffect(() => {
     setUserPointsAmount(userData.pointsAmount)
-  }, [])
+  })
 
   return (
     <>
@@ -90,7 +90,7 @@ export const Home: React.FC = () => {
               title="Quiz"
               iconName={ICONS.Quiz}
               onPress={() => {
-                // console.log('Quiz')
+                navigation.navigate('Quiz')
               }}
             />
           </NavigationButtonsContainer>

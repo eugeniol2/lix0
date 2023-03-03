@@ -12,7 +12,9 @@ import {
   MissionDetails,
   CouponStore,
   CouponDetails,
-  MyCoupons
+  MyCoupons,
+  Quiz,
+  Questionary
 } from '../../screens'
 import { CouponVizualization } from '../../screens/home/couponStore/couponDetails/couponVisualization'
 
@@ -38,6 +40,8 @@ export const HomeStack: React.FC = () => {
           component={CouponVizualization}
         />
         <Screen name={ROUTE.MYCOUPONS} component={MyCoupons} />
+        <Screen name={ROUTE.QUIZ} component={Quiz} />
+        <Screen name={ROUTE.QUESTIONARY} component={Questionary} />
       </Navigator>
     </>
   )

@@ -17,3 +17,14 @@ export const ICONS = {
   home: require('../assets//icons/homeicon.png'),
   navBack: require('../assets/icons/navBack.png')
 }
+
+export const QuizImages = {
+  chemical: require('../assets/quizImages/chemical.png'),
+  fossil: require('../assets/quizImages/fossil.png'),
+  manage: require('../assets/quizImages/manage.png'),
+  residues: require('../assets/quizImages/residues.png'),
+  turism: require('../assets/quizImages/turism.png'),
+  sustainable: require('../assets/quizImages/sustainable.png'),
+  sustainableCountry: require('../assets/quizImages/sustainableCountry.png'),
+  sustainableShopping: require('../assets/quizImages/sustainableShopping.png')
+}
