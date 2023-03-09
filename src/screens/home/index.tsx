@@ -75,7 +75,9 @@ export const Home: React.FC = () => {
             />
             <HomeNavigationBoxButton
               title="Coleta"
-              onPress={() => {}}
+              onPress={() => {
+                navigation.navigate('Collect')
+              }}
               iconName={ICONS.SearchHomeIcon}
             />
             <HomeNavigationBoxButton

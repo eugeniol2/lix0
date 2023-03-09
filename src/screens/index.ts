@@ -15,6 +15,7 @@ import { CouponDetails } from './home/couponStore/couponDetails'
 import { MyCoupons } from './home/couponStore/myCoupons'
 import { Quiz } from './home/quiz'
 import { Questionary } from './home/quiz/questionary'
+import { Collect } from './home/Collect'
 
 export {
   Login,
@@ -33,5 +34,6 @@ export {
   CouponDetails,
   MyCoupons,
   Quiz,
-  Questionary
+  Questionary,
+  Collect
 }

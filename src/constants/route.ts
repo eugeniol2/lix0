@@ -21,5 +21,6 @@ export const ROUTE = {
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
   QUESTIONARY: 'Questionary',
+  COLLECT: 'Collect',
   TAB_NAVIGATOR: 'Tab Navigator'
 }
