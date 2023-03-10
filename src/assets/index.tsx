@@ -15,7 +15,9 @@ export const ICONS = {
   email: require('../assets/icons/carbon_email.png'),
   detailsPerson: require('../assets/icons/detailsPerson.png'),
   home: require('../assets//icons/homeicon.png'),
-  navBack: require('../assets/icons/navBack.png')
+  navBack: require('../assets/icons/navBack.png'),
+  book: require('../assets/icons/interface-content-book.png'),
+  satellite: require('../assets/icons/interface-share-satellite.png')
 }
 
 export const QuizImages = {

@@ -32,7 +32,7 @@ export const Collect: React.FC = () => {
 
   return (
     <SafeAreaView>
-      <MainHeader text="Ranking" />
+      <MainHeader text="Coleta" />
       <Container>
         <SelectContainer>
           <SelectList

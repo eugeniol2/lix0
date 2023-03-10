@@ -111,7 +111,7 @@ export const CouponVizualization: React.FC = () => {
             <GoBackButton
               style={{ marginBottom: 16 }}
               onPress={() => {
-                navigation.navigate('CouponVizualization')
+                navigation.navigate('CouponStore')
               }}
             >
               <CustomText style={{ fontSize: 16 }}>VOLTAR</CustomText>
