@@ -14,6 +14,10 @@ export const ROUTE = {
   MYMISSIONS: 'MyMissions',
   PROVEPHOTOORVIDEO: 'ProvePhotoOrVideo',
   PROVECAMERASCREEN: 'ProveCameraScreen',
+  COUPONSTORE: 'CouponStore',
+  COUPONSDETAILS: 'CouponDetails',
+  COUPONVIZUALIZATION: 'CouponVizualization',
+  MYCOUPONS: 'MyCoupons',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
 

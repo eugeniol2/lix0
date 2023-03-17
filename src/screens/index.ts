@@ -7,11 +7,12 @@ import { Ranking } from './home/ranking'
 import { ChooseMission } from './home/chooseMission'
 import { MyMissions } from './home/myMissions'
 import { MyMissionDetails } from './home/myMissions/myMissionDetails'
-
 import { ProvePhotoOrVideo } from './home/myMissions/provePhotoOrVideo'
 import { ProveCameraScreen } from './home/myMissions/provePhotoOrVideo/proveCameraScreen'
 import { MissionDetails } from './home/chooseMission/missionDetails'
-
+import { CouponStore } from './home/couponStore'
+import { CouponDetails } from './home/couponStore/couponDetails'
+import { MyCoupons } from './home/couponStore/myCoupons'
 export {
   Login,
   Register,
@@ -24,5 +25,8 @@ export {
   MyMissionDetails,
   MissionDetails,
   ProvePhotoOrVideo,
-  ProveCameraScreen
+  ProveCameraScreen,
+  CouponStore,
+  CouponDetails,
+  MyCoupons
 }

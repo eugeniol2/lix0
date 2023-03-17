@@ -1,12 +1,12 @@
 import { useNavigation } from '@react-navigation/native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ICONS, IMAGES } from '../../assets'
+import { userData } from '../../services/mock'
 import {
   HomeNavigationBoxButton,
   HomeDashBoard,
   IconButton
 } from '../../components'
-
 import {
   CustomImage,
   SafeAreaViewContainer,
@@ -18,9 +18,16 @@ import {
   HomeBodyContainer,
   HomeDashBoardContainer
 } from './styles'
+import { useAtom } from 'jotai'
+import { userPointsAmountAtom } from '../../atoms/userPoints'
 
 export const Home: React.FC = () => {
   const navigation = useNavigation()
+  const [userPointsAmount, setUserPointsAmount] = useAtom(userPointsAmountAtom)
+
+  useEffect(() => {
+    setUserPointsAmount(userData.pointsAmount)
+  })
 
   return (
     <>
@@ -49,14 +56,12 @@ export const Home: React.FC = () => {
         <HomeBodyContainer>
           <HomeDashBoardContainer>
             <HomeDashBoard
-              userPointsValue="1200"
+              userPointsValue={userPointsAmount}
               rankingButton={() => {
-                // console.log('left button pressed')
                 navigation.navigate('Ranking')
               }}
               missionsButton={() => {
                 navigation.navigate('BuscarMissões')
-                // console.log('right button pressed')
               }}
             />
           </HomeDashBoardContainer>
@@ -70,16 +75,14 @@ export const Home: React.FC = () => {
             />
             <HomeNavigationBoxButton
               title="Coleta"
-              onPress={() => {
-                // console.log('Coleta')
-              }}
+              onPress={() => {}}
               iconName={ICONS.SearchHomeIcon}
             />
             <HomeNavigationBoxButton
               title="Cupons"
               iconName={ICONS.Coupon}
               onPress={() => {
-                // console.log('Cupons')
+                navigation.navigate('CouponStore')
               }}
             />
 

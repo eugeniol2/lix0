@@ -1,14 +1,21 @@
-import { TouchableOpacityProps } from 'react-native'
+import { TouchableOpacityProps, Text, Image } from 'react-native'
 import React from 'react'
-import { Container, HeaderIcon, HeaderText } from './styles'
+import { Container, HeaderIcon, HeaderText, PointsBox } from './styles'
 import { ICONS } from '../../assets'
 import { useNavigation } from '@react-navigation/native'
 
 interface MainHeaderProps extends TouchableOpacityProps {
   text: string
+  hasUserPoints?: boolean
+  pointsAmount?: number
 }
 
-export const MainHeader: React.FC<MainHeaderProps> = ({ text, ...rest }) => {
+export const MainHeader: React.FC<MainHeaderProps> = ({
+  text,
+  hasUserPoints,
+  pointsAmount,
+  ...rest
+}) => {
   const navigation = useNavigation()
 
   return (
@@ -22,6 +29,12 @@ export const MainHeader: React.FC<MainHeaderProps> = ({ text, ...rest }) => {
         {...rest}
       />
       <HeaderText>{text}</HeaderText>
+      {hasUserPoints && (
+        <PointsBox>
+          <Text style={{ color: '#138A37' }}>{pointsAmount}</Text>
+          <Image source={ICONS.TrashBag} resizeMode="contain" />
+        </PointsBox>
+      )}
     </Container>
   )
 }
