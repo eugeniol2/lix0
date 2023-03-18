@@ -173,6 +173,17 @@ export const storeCoupons = [
   }
 ]
 
+interface quizObject {
+  fossil: boolean
+  chemical: boolean
+  manage: boolean
+  residues: boolean
+  sustainable: boolean
+  sustainableCountry: boolean
+  sustainableShopping: boolean
+  turism: boolean
+}
+
 export interface userDataProps {
   id: number
   username: string
@@ -180,6 +191,7 @@ export interface userDataProps {
   birthDate: string
   adress: string
   pointsAmount: number
+  quizScore: quizObject
 }
 
 export const userData = {
@@ -188,5 +200,45 @@ export const userData = {
   email: 'JorgeCarlos94@gmail.com',
   birthDate: '12/03/1992',
   adress: 'rua da casa 188',
-  pointsAmount: 1320
+  pointsAmount: 1320,
+  quizScore: {
+    fossil: false,
+    chemical: false,
+    manage: false,
+    residues: false,
+    sustainable: true,
+    sustainableCountry: false,
+    sustainableShopping: true,
+    turism: true
+  }
+}
+
+export const quizData = {
+  questions: [
+    {
+      question: 'Será que o meio ambiente pode ser melhor um dia ?',
+      answers: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ',
+        'não',
+        'talvez',
+        'com certeza'
+      ],
+      corretAnswer: 'não'
+    },
+    {
+      question: 'Um lapis verde é verde ?',
+      answers: ['sim', 'não', 'talvez', 'com certeza'],
+      corretAnswer: 'talvez'
+    },
+    {
+      question: 'um gato surfando na praia é viável?',
+      answers: ['sim', 'não', 'talvez', 'com certeza'],
+      corretAnswer: 'não'
+    },
+    {
+      question: 'Flores verdes sempre serão verdes?',
+      answers: ['sim', 'não', 'talvez', 'com certeza'],
+      corretAnswer: 'talvez'
+    }
+  ]
 }

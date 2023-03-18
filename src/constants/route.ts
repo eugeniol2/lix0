@@ -20,6 +20,7 @@ export const ROUTE = {
   MYCOUPONS: 'MyCoupons',
   GATHERING: 'Coleta',
   QUIZ: 'Quiz',
-
+  QUESTIONARY: 'Questionary',
+  COLLECT: 'Collect',
   TAB_NAVIGATOR: 'Tab Navigator'
 }

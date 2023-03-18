@@ -18,8 +18,9 @@ export declare global {
       CouponDetails: undefined
       CouponVizualization: undefined
       MyCoupons: undefined
-      Coleta: undefined
+      Collect: undefined
       Quiz: undefined
+      Questionary: undefined
     }
   }
 }

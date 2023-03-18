@@ -15,5 +15,18 @@ export const ICONS = {
   email: require('../assets/icons/carbon_email.png'),
   detailsPerson: require('../assets/icons/detailsPerson.png'),
   home: require('../assets//icons/homeicon.png'),
-  navBack: require('../assets/icons/navBack.png')
+  navBack: require('../assets/icons/navBack.png'),
+  book: require('../assets/icons/interface-content-book.png'),
+  satellite: require('../assets/icons/interface-share-satellite.png')
+}
+
+export const QuizImages = {
+  chemical: require('../assets/quizImages/chemical.png'),
+  fossil: require('../assets/quizImages/fossil.png'),
+  manage: require('../assets/quizImages/manage.png'),
+  residues: require('../assets/quizImages/residues.png'),
+  turism: require('../assets/quizImages/turism.png'),
+  sustainable: require('../assets/quizImages/sustainable.png'),
+  sustainableCountry: require('../assets/quizImages/sustainableCountry.png'),
+  sustainableShopping: require('../assets/quizImages/sustainableShopping.png')
 }
