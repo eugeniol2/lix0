@@ -20,7 +20,6 @@ export interface missionDataProps {
 }
 
 export const data = [
-  // missions
   {
     id: 11111,
     emProgresso: true,
